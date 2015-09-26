@@ -26,4 +26,4 @@ alias settings="subl ~/.bash_profile ~/bash_dotfiles/aliases.bash"
 function op() { open ./$1; }
 
 #function to create git repository and default .gitignore
-function git_setup() { git init; touch .gitignore; echo ".DS_Store" >> .gitignore; }
+function git_setup() { git init; echo ".DS_Store" >> .gitignore; cat "${DOTFILES_DIR}license.txt" >> license.txt; }
