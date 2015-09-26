@@ -25,5 +25,5 @@ alias settings="subl ~/.bash_profile ~/bash_dotfiles/aliases.bash"
 #alias to open current directory in finder
 function op() { open ./$1; }
 
-#function to create default .gitignore
-function default_ignore() { touch .gitignore; echo ".DS_Store" >> .gitignore; }
+#function to create git repository and default .gitignore
+function git_setup() { git init; touch .gitignore; echo ".DS_Store" >> .gitignore; }
