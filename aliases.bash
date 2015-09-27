@@ -31,4 +31,5 @@ function op() { open ./$1; }
 #function to create git repository and default .gitignore
 function git_setup() { git init; echo ".DS_Store" >> .gitignore; cat "${DOTFILES_DIR}license.txt" >> license.txt; }
 
+#function to create file if not exists and open with sublime
 function edit() { touch ./$1; subl ./$1; }
