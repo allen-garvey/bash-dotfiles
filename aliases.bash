@@ -7,6 +7,9 @@ alias synced="ruby /Users/Allen\ X/Documents/Programming/Ruby/synced/synced.rb"
 #alias for sublime
 alias subl="open -a \"Sublime Text 3\""
 
+#alias for sublime packages
+alias subl_settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sublime-snippets; open ."
+
 #function to cd into directory in sites dir
 function sites() { cd ~/Sites/; cd ./$1; }
 
