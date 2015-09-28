@@ -33,3 +33,6 @@ function git_setup() { git init; echo ".DS_Store" >> .gitignore; cat "${DOTFILES
 
 #function to create file if not exists and open with sublime
 function edit() { touch ./$1; subl ./$1; }
+
+#alias to add all to git and check
+alias g_a="git add .; git status;"
