@@ -1,8 +1,8 @@
 #alias for sassquatch
-alias sasq="ruby /Users/Allen\ X/Documents/Programming/Ruby/sassquatch/sassquatch.rb"
+alias sasq="ruby \"${HOME}/Documents/Programming/Ruby/sassquatch/sassquatch.rb\""
 
 #alias for synced
-alias synced="ruby /Users/Allen\ X/Documents/Programming/Ruby/synced/synced.rb"
+alias synced="ruby \"${HOME}/Documents/Programming/Ruby/synced/synced.rb\""
 
 #alias for sublime
 alias subl="open -a \"Sublime Text 3\""
@@ -23,7 +23,7 @@ function doc() { cd ~/Documents/; cd ./$1; }
 function prog() { cd ~/Documents/Programming/; cd ./$1; }
 
 #alias for bash settings
-alias settings="subl ~/.bash_profile ~/bash_dotfiles/aliases.bash"
+alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}aliases.bash\""
 
 #alias to open current directory in finder
 function op() { open ./$1; }
