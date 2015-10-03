@@ -29,7 +29,7 @@ alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}aliases.bash\""
 function op() { open ./$1; }
 
 #function to create git repository and default .gitignore
-function git_setup() { git init; echo ".DS_Store" >> .gitignore; cat "${DOTFILES_DIR}license.txt" >> license.txt; }
+function git_setup() { git init; echo ".DS_Store\n*.sublime-project\n*.sublime-workspace\n**/.sass-cache/*\n.sass-cache\n.sass-cache/*\nnode_modules/*\n" >> .gitignore; cat "${DOTFILES_DIR}license.txt" >> license.txt; }
 
 #function to create file if not exists and open with sublime
 function edit() { touch ./$1; subl ./$1; }
