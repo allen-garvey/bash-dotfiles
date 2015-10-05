@@ -36,3 +36,6 @@ function edit() { touch ./$1; subl ./$1; }
 
 #alias to add all to git and check
 alias g_a="git add .; git status;"
+
+#alias to open current directory in gitup
+alias gitup="open . -a \"GitUp\""
