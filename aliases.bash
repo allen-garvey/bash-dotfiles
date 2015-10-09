@@ -39,3 +39,8 @@ alias g_a="git add .; git status;"
 
 #alias to open current directory in gitup
 alias gitup="open . -a \"GitUp\""
+
+#rails aliases
+alias rls="./bin/rails"
+
+alias rke="./bin/rake"
