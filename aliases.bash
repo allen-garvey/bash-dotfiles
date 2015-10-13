@@ -31,11 +31,14 @@ function op() { open ./$1; }
 #function to create git repository and default .gitignore
 function git_setup() { git init; echo -e ".DS_Store\n*.sublime-project\n*.sublime-workspace\n**/.sass-cache/*\n.sass-cache\n.sass-cache/*\nnode_modules/*\n" >> .gitignore; cat "${DOTFILES_DIR}license.txt" >> license.txt; }
 
-#function to create file if not exists and open with sublime
-function edit() { touch ./$1; subl ./$1; }
-
 #alias to add all to git and check
 alias g_a="git add .; git status;"
+
+#function to copy git repo and gitignore
+function git_copy() { cp -r ./.git $1/.git; cp ./.gitignore $1/.gitignore; }
+
+#function to create file if not exists and open with sublime
+function edit() { touch ./$1; subl ./$1; }
 
 #alias to open current directory in gitup
 alias gitup="open . -a \"GitUp\""
