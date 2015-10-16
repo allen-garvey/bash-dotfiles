@@ -40,6 +40,9 @@ function doc() { cd ~/Documents/; cd ./$1; }
 #function to cd into directory in programming dir
 function prog() { cd ~/Documents/Programming/; cd ./$1; }
 
+#function to cd into directory in desktop
+function desktop() { cd ~/Desktop/; cd ./$1; }
+
 #alias to open current directory in finder
 function op() { open ./$1; }
 
