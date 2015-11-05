@@ -66,3 +66,7 @@ function git_copy() { cp -r ./.git $1/.git; cp ./.gitignore $1/.gitignore; }
 alias rls="./bin/rails"
 
 alias rke="./bin/rake"
+
+#Convenience
+#start developing on existing web project in current directory (develop web)
+alias dw="op;gitup;subl .;"
