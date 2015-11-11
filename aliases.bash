@@ -52,7 +52,7 @@ function op() { open ./$1; }
 alias gitup="open . -a \"GitUp\""
 
 #function to create git repository and default .gitignore
-function git_setup() { git init; cat "${DOTFILES_DIR}default.gitignore" >> .gitignore; cat "${DOTFILES_DIR}license.txt" >> license.txt; }
+function git_setup() { git init; cat "${DOTFILES_DIR}default.gitignore" >> .gitignore; cat "${DOTFILES_DIR}default_license.txt" >> license.txt; }
 
 #alias to add all to git and check
 alias g_a="git add .; git status;"
