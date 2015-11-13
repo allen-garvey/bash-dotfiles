@@ -13,7 +13,7 @@ alias grepc="grep -nr --color=always"
 alias sasq="ruby \"${HOME}/Documents/Programming/Ruby/sassquatch/sassquatch.rb\""
 
 #alias for synced
-alias synced="ruby \"${HOME}/Documents/Programming/Ruby/synced/synced.rb\""
+alias synced="rsync -a -p -u -v -v"
 
 #SUBLIME
 
