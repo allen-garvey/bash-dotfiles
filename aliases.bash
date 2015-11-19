@@ -3,6 +3,8 @@
 #alias for bash settings
 alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}aliases.bash\""
 
+alias dotfiles="cd \"$DOTFILES_DIR\""
+
 #BUILT INS
 
 alias grepc="grep -nr --color=always"
