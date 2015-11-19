@@ -72,3 +72,8 @@ alias rke="./bin/rake"
 #Convenience
 #start developing on existing web project in current directory (develop web)
 alias dw="op;gitup;subl .;"
+
+#Django
+#start server
+alias djs="python manage.py runserver 3000"
+
