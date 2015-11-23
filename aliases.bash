@@ -77,3 +77,17 @@ alias dw="op;gitup;subl .;"
 #start server
 alias djs="python manage.py runserver 3000"
 
+#open new tab - add command to do it in new tab
+# http://stackoverflow.com/questions/7171725/open-new-terminal-tab-from-command-line-mac-os-x
+function tab() {
+  osascript 2>/dev/null <<EOF
+    tell application "System Events"
+      tell process "Terminal" to keystroke "t" using command down
+    end
+    tell application "Terminal"
+      activate
+      do script with command "cd \"$PWD\"; $*" in window 1
+    end tell
+EOF
+}
+
