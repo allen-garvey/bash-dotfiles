@@ -76,6 +76,7 @@ alias dw="op;gitup;subl .;"
 #Django
 #start server
 alias djs="python manage.py runserver 3000"
+alias dj="python manage.py"
 
 #open new tab - add command to do it in new tab
 # http://stackoverflow.com/questions/7171725/open-new-terminal-tab-from-command-line-mac-os-x
