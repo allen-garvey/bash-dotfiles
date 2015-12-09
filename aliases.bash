@@ -92,3 +92,5 @@ function tab() {
 EOF
 }
 
+#apache config
+alias apache_config="cd /etc/apache2"
