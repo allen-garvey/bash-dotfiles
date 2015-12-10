@@ -94,3 +94,6 @@ EOF
 
 #apache config
 alias apache_config="cd /etc/apache2"
+
+#fonts
+alias fonts="cd ~/Library/fonts;op;"
