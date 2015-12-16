@@ -93,7 +93,7 @@ EOF
 }
 
 #apache config
-alias apache_config="cd /etc/apache2;op;"
+alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;gitup;"
 
 #fonts
 alias fonts="cd ~/Library/fonts;op;"
