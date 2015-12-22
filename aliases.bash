@@ -92,7 +92,9 @@ function tab() {
 EOF
 }
 
-#apache config
+#apache
+alias apache="sudo apachectl"
+
 alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;gitup;"
 
 #fonts
