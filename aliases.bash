@@ -9,6 +9,9 @@ alias dotfiles="cd \"$DOTFILES_DIR\""
 
 alias grepc="grep -nr --color=always"
 
+#find files with extension in current directory
+function findex() { find . -type f -name \*.$1; }
+
 #CUSTOM SCRIPTS
 
 #alias for sassquatch
