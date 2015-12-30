@@ -41,9 +41,6 @@ function desktop() { cd ~/Desktop/; cd ./$1; }
 
 #Git
 
-#alias to open current directory in gitup
-alias gitup="open . -a \"GitUp\""
-
 #function to create git repository and default .gitignore
 function git_setup() { git init; cat "${DOTFILES_DIR}default.gitignore" >> .gitignore; cat "${DOTFILES_DIR}default_license.txt" >> license.txt; }
 
