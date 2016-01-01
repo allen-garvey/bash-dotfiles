@@ -68,3 +68,6 @@ alias dj="python manage.py"
 #apache
 alias apache="sudo apachectl"
 
+#OSU
+alias flip="ssh garveya@access.engr.oregonstate.edu"
+
