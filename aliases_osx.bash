@@ -3,7 +3,7 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 #SETTINGS for OSX only
 
 #alias for bash settings
-alias settings="subl ~/.bash_profile \"./${DOTFILES_DIR}\""
+alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}\""
 
 #BUILT INS
 
