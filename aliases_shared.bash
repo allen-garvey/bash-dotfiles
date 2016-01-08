@@ -38,7 +38,11 @@ function prog() { cd ~/Documents/Programming/; cd ./$1; }
 #function to cd into directory in desktop
 function desktop() { cd ~/Desktop/; cd ./$1; }
 
+
 function osu(){ doc OSU; cd ./$1; }
+
+#C++
+function cppc() { g++ "$1.cpp" -o $1; }
 
 
 #Git
@@ -69,4 +73,7 @@ alias dj="python manage.py"
 
 #apache
 alias apache="sudo apachectl"
+
+#OSU
+alias flip="ssh garveya@access.engr.oregonstate.edu"
 

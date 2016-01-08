@@ -7,10 +7,14 @@
 node_modules/*
 *.png
 *.gif
+*.bmp
 *.jpg
+*.jpeg
+*.svg
+*.ico
 Thumbs.db
 *.ttf
-*.svg
+*.otf
 *.eot
 *.woff
 *.zip
