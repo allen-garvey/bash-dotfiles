@@ -10,3 +10,6 @@ alias settings="subl ~/.bash_aliases ~/.bashrc ~/.vimrc \"${DOTFILES_DIR}aliases
 
 #APT
 alias apt="sudo apt-get"
+
+#alias to open current directory in file browser
+alias op="nautilus .;"
