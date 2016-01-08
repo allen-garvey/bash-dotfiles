@@ -38,6 +38,8 @@ function prog() { cd ~/Documents/Programming/; cd ./$1; }
 #function to cd into directory in desktop
 function desktop() { cd ~/Desktop/; cd ./$1; }
 
+function osu(){ doc OSU; cd ./$1; }
+
 
 #Git
 
