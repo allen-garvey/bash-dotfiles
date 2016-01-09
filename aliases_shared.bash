@@ -48,7 +48,7 @@ function cppc() { g++ "$1.cpp" -o $1; }
 #Git
 
 #function to create git repository and default .gitignore
-function git_setup() { git init; cat "${DOTFILES_DIR}default.gitignore" >> .gitignore; cat "${DOTFILES_DIR}default_license.txt" >> license.txt; }
+function git_setup() { git init; cat "${DOTFILES_DIR}default.gitignore" >> .gitignore; cat "${DOTFILES_DIR}default_license.txt" >> license.txt; cat "${DOTFILES_DIR}default_readme.md" >> README.md; }
 
 #alias to add all to git and check
 alias g_a="git add .; git status;"
