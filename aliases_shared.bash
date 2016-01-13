@@ -69,7 +69,8 @@ alias rke="./bin/rake"
 alias djs="python manage.py runserver 3000"
 alias dj="python manage.py"
 
-
+#jekyll
+alias jeks="jekyll serve --port 3000"
 
 #apache
 alias apache="sudo apachectl"
