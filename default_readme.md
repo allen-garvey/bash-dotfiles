@@ -1,13 +1,13 @@
-#{$PROJECT_TITLE}
+# {$PROJECT_TITLE}
 
 {$SHORT_DESCRIPTION}
 
-##Dependencies
+## Dependencies
 
 * {$PLACEHOLDER}
 * {$PLACEHOLDER}
 
-##Getting Started
+## Getting Started
 
 * {$PLACEHOLDER}
 * {$PLACEHOLDER}
@@ -15,6 +15,6 @@
 * [http://www.google.com](Google)
 * `code example`
 
-##License
+## License
 
 {$PROJECT_TITLE} is released under the MIT License. See license.txt for more details.
