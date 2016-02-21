@@ -18,8 +18,8 @@ alias synced="rsync -a -p -u -v -v"
 
 #SUBLIME
 
-#function to create file if not exists and open with sublime
-function edit() { touch ./$1; subl ./$1; }
+#open sublime workspace in current directory if there is one, otherwise open folder in sublime
+alias sp="if [ -f *.sublime-workspace ]; then subl *.sublime-workspace; else subl .; fi"
 
 #Directories
 
@@ -65,9 +65,9 @@ alias rke="./bin/rake"
 
 
 #Django
-#start server
-alias djs="python manage.py runserver 3000"
 alias dj="python manage.py"
+#start server
+alias djs="dj runserver 3000"
 
 #jekyll
 alias jeks="jekyll serve --port 3000"
