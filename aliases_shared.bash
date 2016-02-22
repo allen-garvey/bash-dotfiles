@@ -7,6 +7,8 @@ alias dotfiles="cd \"$DOTFILES_DIR\""
 
 #find files with extension in current directory
 function findex() { find . -type f -name \*.$1; }
+#find file by name recursively in current directory
+alias findf="find . -name"
 
 #CUSTOM SCRIPTS
 
