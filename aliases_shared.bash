@@ -58,6 +58,9 @@ alias g_a="git add .; git status;"
 #function to copy git repo and gitignore
 function git_copy() { cp -r ./.git $1/.git; cp ./.gitignore $1/.gitignore; }
 
+#alias to discard all uncommited changes
+alias git_discard="git clean -df && git checkout -- ."
+
 #RAILS
 
 #rails aliases
