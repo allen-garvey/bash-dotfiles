@@ -46,6 +46,9 @@ function osu(){ doc OSU; cd ./$1; }
 #C++
 function cppc() { g++ "$1.cpp" -o $1; }
 
+#c
+function c_c() { gcc -Wall -std=c99 -o $1 "$1.c"; }
+
 
 #Git
 
