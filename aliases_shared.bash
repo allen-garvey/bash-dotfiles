@@ -3,6 +3,9 @@
 #alias for bash settings
 alias dotfiles="cd \"$DOTFILES_DIR\""
 
+#set input mode to vi
+set -o vi
+
 #BUILT INS
 
 #find files with extension in current directory
