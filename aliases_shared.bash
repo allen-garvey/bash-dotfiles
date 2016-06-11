@@ -7,6 +7,10 @@ alias dotfiles="cd \"$DOTFILES_DIR\""
 set -o vi
 
 #BUILT INS
+alias a="ls"
+alias aa="ls -l"
+
+alias up="cd ../"
 
 #find files with extension in current directory
 function findex() { find . -type f -name \*.$1; }
@@ -59,7 +63,9 @@ function c_c() { gcc -Wall -std=c99 -o $1 "$1.c"; }
 function git_setup() { git init; cat "${DOTFILES_DIR}default.gitignore" >> .gitignore; cat "${DOTFILES_DIR}default_license.txt" >> license.txt; cat "${DOTFILES_DIR}default_readme.md" >> README.md; }
 
 #alias to add all to git and check
-alias g_a="git add .; git status;"
+alias ga="git add .; git status;"
+
+alias gm="git commit -m"
 
 #function to copy git repo and gitignore
 function git_copy() { cp -r ./.git $1/.git; cp ./.gitignore $1/.gitignore; }
