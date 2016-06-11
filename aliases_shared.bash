@@ -67,6 +67,8 @@ alias ga="git add .; git status;"
 
 alias gm="git commit -m"
 
+alias gp="git push"
+
 #function to copy git repo and gitignore
 function git_copy() { cp -r ./.git $1/.git; cp ./.gitignore $1/.gitignore; }
 
