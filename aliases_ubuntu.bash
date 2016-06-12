@@ -13,3 +13,9 @@ alias apt="sudo apt-get"
 
 #alias to open current directory in file browser
 alias op="nautilus .;"
+
+#node
+alias node="nodejs"
+
+#nginx
+function ng() { sudo systemctl $1 nginx; }
