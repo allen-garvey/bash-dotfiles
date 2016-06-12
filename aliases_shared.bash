@@ -10,7 +10,7 @@ set -o vi
 alias a="ls"
 alias aa="ls -l"
 
-alias up="cd ../"
+alias up="cd ../;ls"
 
 #find files with extension in current directory
 function findex() { find . -type f -name \*.$1; }
@@ -31,6 +31,7 @@ alias synced="rsync -a -p -u -v -v"
 alias sp="if [ -f *.sublime-workspace ]; then subl *.sublime-workspace; else subl .; fi"
 
 #Directories
+function home() { cd ~/; cd ./$1; ls; }
 
 #function to cd into directory in sites dir
 function sites() { cd ~/Sites/; cd ./$1; }
