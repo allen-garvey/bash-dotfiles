@@ -33,6 +33,10 @@ alias subl_settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 #alias to open current directory in finder
 function op() { open ./$1; }
 
+
+#Postgres.app - psql command
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+
 #Git
 
 #alias to open current directory in gitup
