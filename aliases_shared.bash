@@ -31,25 +31,28 @@ alias synced="rsync -a -p -u -v -v"
 alias sp="if [ -f *.sublime-workspace ]; then subl *.sublime-workspace; else subl .; fi"
 
 #Directories
-function home() { cd ~/; cd ./$1; ls; }
+#generic change directory function
+function cddir() { cd "$1"; cd "./$2"; }
+
+function home() { cddir ~ "$1"; ls; }
 
 #function to cd into directory in sites dir
-function sites() { cd ~/Sites/; cd ./$1; }
+function sites() { cddir ~/Sites "$1"; }
 
 #function to cd into directory in websites dir
-function web() { cd ~/Sites/Websites/; cd ./$1; }
+function web() { cddir ~/Sites/Websites "$1"; }
 
 #function to cd into directory in programming dir
-function doc() { cd ~/Documents/; cd ./$1; }
+function doc() { cddir ~/Documents "$1"; }
 
 #function to cd into directory in programming dir
-function prog() { cd ~/Documents/Programming/; cd ./$1; }
+function prog() { cddir ~/Documents/Programming "$1"; ls; }
 
 #function to cd into directory in desktop
-function desktop() { cd ~/Desktop/; cd ./$1; }
+function desktop() { cddir ~/Desktop "$1"; }
 
 
-function osu(){ doc OSU; cd ./$1; }
+function osu(){ cddir ~/Documents/OSU "$1"; ls; }
 
 #C++
 function cppc() { g++ "$1.cpp" -o $1; }
