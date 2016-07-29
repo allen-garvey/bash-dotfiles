@@ -97,9 +97,6 @@ alias djs="dj runserver 3000"
 #jekyll
 alias jeks="jekyll serve --port 3000"
 
-#apache
-alias apache="sudo apachectl"
-
 #OSU
 alias flip="ssh garveya@access.engr.oregonstate.edu"
 

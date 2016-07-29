@@ -17,5 +17,8 @@ alias op="nautilus .;"
 #node
 alias node="nodejs"
 
+#apache
+alias apache="sudo service apache2"
+
 #nginx
 function ng() { sudo systemctl $1 nginx; }
