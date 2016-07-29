@@ -16,8 +16,9 @@ alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}\""
 alias grepc="grep -nr --color=always"
 
 
-#CUSTOM SCRIPTS
-
+#REDIS
+#assumes Redis is installed by homebrew
+alias redis_start="redis-server /usr/local/etc/redis.conf;"
 
 
 #SUBLIME
@@ -65,7 +66,7 @@ EOF
 }
 
 #apache
-
+alias apache="sudo apachectl"
 alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;gitup;"
 
 #fonts
