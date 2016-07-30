@@ -17,6 +17,9 @@ function findex() { find . -type f -name \*.$1; }
 #find file by name recursively in current directory
 alias findf="find . -name"
 
+#CONFIGS
+alias hosts="sudo vim /etc/hosts;"
+
 #CUSTOM SCRIPTS
 
 #alias for sassquatch
