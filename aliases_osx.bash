@@ -49,7 +49,8 @@ alias gitup="open . -a \"GitUp\""
 #start developing on existing web project in current directory (develop web)
 alias dw="op;gitup;subl .;"
 
-#Django
+
+#Applescript for terminal commands
 
 #open new tab - add command to do it in new tab
 # http://stackoverflow.com/questions/7171725/open-new-terminal-tab-from-command-line-mac-os-x
