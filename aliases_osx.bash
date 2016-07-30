@@ -65,6 +65,18 @@ function tab() {
 EOF
 }
 
+#opens current active finder window/tab directory in terminal
+function openf() {
+  osascript 2>/dev/null <<EOF
+	tell application "Finder"
+		set current_directory to quoted form of POSIX path of (target of window 1 as alias)
+		tell application "Terminal"
+			do script "cd " & current_directory in window 1
+		end tell
+	end tell
+EOF
+}
+
 #apache
 alias apache="sudo apachectl"
 alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;gitup;"
