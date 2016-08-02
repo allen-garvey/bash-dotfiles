@@ -67,7 +67,7 @@ EOF
 }
 
 #opens current active finder window/tab directory in terminal
-function openf() {
+function opf() {
   osascript 2>/dev/null <<EOF
 	tell application "Finder"
 		set current_directory to quoted form of POSIX path of (target of window 1 as alias)
