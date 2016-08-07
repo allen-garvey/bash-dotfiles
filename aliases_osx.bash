@@ -42,6 +42,8 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 #alias to open current directory in gitup
 alias gitup="open . -a \"GitUp\""
+#open stack overflow to add part of file in git to staging
+alias git_part="open \"http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git\";"
 
 #RAILS
 
