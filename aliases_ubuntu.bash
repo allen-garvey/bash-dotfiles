@@ -21,4 +21,5 @@ alias node="nodejs"
 alias apache="sudo service apache2"
 
 #nginx
-function ng() { sudo systemctl $1 nginx; }
+alias nginx="sudo service nginx"
+#function ng() { sudo systemctl $1 nginx; }
