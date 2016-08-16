@@ -2,6 +2,7 @@
 
 #basic shell setup to mimic ubuntu
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
+LS_COLORS=$LS_COLORS:'di=1;35:' ; export LS_COLORS
 export PAGER=less
 export EDITOR=vim
 

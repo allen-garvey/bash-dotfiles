@@ -5,6 +5,7 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 #PS1 to mimic Ubuntu default terminal theme (ubuntu terminal background color is: #300a24)
 #export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
+LS_COLORS=$LS_COLORS:'di=1;35:' ; export LS_COLORS
 export PS1="\[\033[01;32m\]\h\[\033[00m\]:\w\$ "
 
 
