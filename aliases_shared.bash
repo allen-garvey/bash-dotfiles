@@ -7,9 +7,9 @@ alias dotfiles="cd \"$DOTFILES_DIR\""
 set -o vi
 
 #BUILT INS
-alias a="ls"
-alias aa="ls -a"
-alias aaa="ls -l"
+alias a="ls -G"
+alias aa="ls -Ga"
+alias aaa="ls -Gl"
 
 alias up="cd ../;ls"
 
