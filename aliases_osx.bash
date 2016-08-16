@@ -1,20 +1,20 @@
-source "${DOTFILES_DIR}aliases_shared.bash"
+#SETTINGS for OSX
 
-#SETTINGS for OSX only
-
+#Basic Shell Setup
 #PS1 to mimic Ubuntu default terminal theme (ubuntu terminal background color is: #300a24)
 #export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 
-LS_COLORS=$LS_COLORS:'di=1;35:' ; export LS_COLORS
+LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 export PS1="\[\033[01;32m\]\h\[\033[00m\]:\w\$ "
 
+#BUILT INS (declared before shared settings)
+alias grepc="grep -nr --color=always"
+
+source "${DOTFILES_DIR}aliases_shared.bash"
 
 #alias for bash settings
 alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}\""
-
-#BUILT INS
-
-alias grepc="grep -nr --color=always"
+alias reload_settings="source ~/.bash_profile;"
 
 
 #REDIS
@@ -88,5 +88,3 @@ alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;
 #fonts
 alias fonts="cd ~/Library/fonts;op;"
 
-
-source "${DOTFILES_DIR}aliases_shared_footer.bash"
