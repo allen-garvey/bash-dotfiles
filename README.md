@@ -16,6 +16,7 @@ Script to save the compiled output files (.php etc) to static .html files.
 
 ### Example .bash_profile for OSX
 `DOTFILES_DIR="${HOME}/bash-dotfiles/"`
+
 `export DOTFILES_DIR`
 
 `source "${DOTFILES_DIR}aliases_osx.bash"`
