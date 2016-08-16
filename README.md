@@ -5,7 +5,7 @@ Script to save the compiled output files (.php etc) to static .html files.
 ##Dependencies
 
 * Bash shell
-* Mac OSX
+* OSX, Ubuntu or FreeBSD
 
 ##Getting Started
 
