@@ -9,6 +9,8 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 #built ins
 alias grepc="grep -nrP --color=always"
 
+alias pkg="sudo pkg"
+
 
 source "${DOTFILES_DIR}aliases_shared_footer.bash"
 
