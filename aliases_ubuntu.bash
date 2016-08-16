@@ -23,3 +23,5 @@ alias apache="sudo service apache2"
 #nginx
 alias nginx="sudo service nginx"
 #function ng() { sudo systemctl $1 nginx; }
+
+source "${DOTFILES_DIR}aliases_shared_footer.bash"

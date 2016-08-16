@@ -86,3 +86,6 @@ alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;
 
 #fonts
 alias fonts="cd ~/Library/fonts;op;"
+
+
+source "${DOTFILES_DIR}aliases_shared_footer.bash"
