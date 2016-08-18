@@ -8,8 +8,8 @@ set -o vi
 
 #BUILT INS
 alias a="ls -G"
-alias aa="ls -Ga"
-alias aaa="ls -Gl"
+alias aa="a -a"
+alias aaa="a -l"
 
 alias up="cd ../;a"
 
