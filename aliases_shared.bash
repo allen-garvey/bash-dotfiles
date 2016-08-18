@@ -60,6 +60,8 @@ function prog() { cddir ~/Documents/Programming "$1"; ls; }
 #function to cd into directory in desktop
 function desktop() { cddir ~/Desktop "$1"; }
 
+function downloads() { cddir ~/Downloads "$1"; }
+
 function etc() { cddir /etc "$1"; ls; }
 
 
