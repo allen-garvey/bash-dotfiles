@@ -15,4 +15,7 @@ alias reload_settings="source ~/.bash_profile;"
 
 alias pkg="sudo pkg"
 
+#nginx
+alias nginx="sudo service nginx"
+
 
