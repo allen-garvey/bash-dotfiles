@@ -43,7 +43,7 @@ alias sp="if [ -f *.sublime-workspace ]; then subl *.sublime-workspace; else sub
 #generic change directory function
 function cddir() { cd "$1"; cd "./$2"; }
 
-function home() { cddir ~ "$1"; ls; }
+function home() { cddir ~ "$1"; a; }
 
 #function to cd into directory in sites dir
 function sites() { cddir ~/Sites "$1"; }
@@ -55,14 +55,14 @@ function web() { cddir ~/Sites/Websites "$1"; }
 function doc() { cddir ~/Documents "$1"; }
 
 #function to cd into directory in programming dir
-function prog() { cddir ~/Documents/Programming "$1"; ls; }
+function prog() { cddir ~/Documents/Programming "$1"; a; }
 
 #function to cd into directory in desktop
 function desktop() { cddir ~/Desktop "$1"; }
 
 function downloads() { cddir ~/Downloads "$1"; }
 
-function etc() { cddir /etc "$1"; ls; }
+function etc() { cddir /etc "$1"; a; }
 
 
 function osu(){ cddir ~/Documents/OSU "$1"; ls; }
