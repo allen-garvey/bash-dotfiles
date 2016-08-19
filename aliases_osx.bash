@@ -14,7 +14,7 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 
 #alias for bash settings
 alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}\""
-alias reload_settings="source ~/.bash_profile;"
+alias reload="source ~/.bash_profile;"
 
 
 #REDIS

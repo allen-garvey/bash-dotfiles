@@ -7,7 +7,7 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 
 #alias for bash settings
 alias settings="subl ~/.bash_aliases ~/.bashrc ~/.vimrc \"${DOTFILES_DIR}aliases_ubuntu.bash\" \"${DOTFILES_DIR}aliases_shared.bash\""
-alias reload_settings="source ~/.bashrc;"
+alias reload="source ~/.bashrc;"
 
 #APT
 alias apt="sudo apt-get"

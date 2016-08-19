@@ -9,7 +9,7 @@ alias grepc="grep -nrP --color=always"
 
 source "${DOTFILES_DIR}aliases_shared.bash"
 
-alias reload_settings="source ~/.bash_profile;"
+alias reload="source ~/.bash_profile;"
 
 #built ins
 
