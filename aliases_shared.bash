@@ -23,6 +23,10 @@ function findex() { find . -type f -name \*.$1; }
 #find file by name recursively in current directory
 alias findf="find . -name"
 
+#prints out http headers for url - arg $1 is url
+#http://stackoverflow.com/questions/10060098/getting-only-response-header-from-http-post-using-curl
+function curlhead() { curl -s -D - http://$1 -o /dev/null; }
+
 #CONFIGS
 alias hosts="sudo vim /etc/hosts;"
 
