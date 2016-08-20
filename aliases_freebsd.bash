@@ -15,6 +15,9 @@ alias reload="source ~/.bash_profile;"
 
 alias pkg="sudo pkg"
 
+#directories
+function localetc() { cddir /usr/local/etc "$1"; a; }
+
 #nginx
 alias nginx="sudo service nginx"
 
