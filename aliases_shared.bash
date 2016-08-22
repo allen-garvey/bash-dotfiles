@@ -52,9 +52,6 @@ function home() { cddir ~ "$1"; a; }
 #function to cd into directory in sites dir
 function sites() { cddir ~/Sites "$1"; }
 
-#function to cd into directory in websites dir
-function web() { cddir ~/Sites/Websites "$1"; }
-
 #function to cd into directory in programming dir
 function doc() { cddir ~/Documents "$1"; }
 
@@ -67,7 +64,6 @@ function desktop() { cddir ~/Desktop "$1"; }
 function downloads() { cddir ~/Downloads "$1"; }
 
 function etc() { cddir /etc "$1"; a; }
-
 
 function osu(){ cddir ~/Documents/OSU "$1"; ls; }
 
