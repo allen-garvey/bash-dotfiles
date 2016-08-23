@@ -104,6 +104,13 @@ alias rls="./bin/rails"
 
 alias rke="./bin/rake"
 
+#Elixir/Phoenix aliases
+
+#start phoenix server
+alias phxs="mix phoenix.server"
+#create model with scaffold
+alias phxg="mix phoenix.gen.html"
+
 
 #Django
 alias dj="python manage.py"
