@@ -27,6 +27,17 @@ alias findf="find . -name"
 #http://stackoverflow.com/questions/10060098/getting-only-response-header-from-http-post-using-curl
 function curlhead() { curl -s -D - $1 -o /dev/null; }
 
+#combine the contents of all files in directory matching extension into one merged file
+#$1 is input directory; $2 is full path of output file; $3 is file extension matching files in input directory
+function mergef(){ 
+	#check the output file doesn't already exist, since it would be overwritten
+	if [ -f $2 ]; then
+		(>&2 echo "Merge files aborting: output file $2 already exists")
+		kill -INT $$
+	fi
+	find $1 -name \*.$3 -print0 | xargs -0 -I file cat file > $2 
+}
+
 #CONFIGS
 alias hosts="sudo vim /etc/hosts;"
 
