@@ -128,6 +128,11 @@ alias dj="python manage.py"
 #start server
 alias djs="dj runserver 3000"
 
+#Python
+#alias for simple python server
+#serves current directory on localhost:3000
+alias simpleserver="python -m SimpleHTTPServer 3000"
+
 #jekyll
 alias jeks="jekyll serve --port 3000"
 
