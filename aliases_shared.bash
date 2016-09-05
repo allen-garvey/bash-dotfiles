@@ -136,6 +136,9 @@ alias simpleserver="python -m SimpleHTTPServer 3000"
 #jekyll
 alias jeks="jekyll serve --port 3000"
 
+#REDIS
+alias redis="redis-cli"
+
 #OSU
 alias flip="ssh garveya@access.engr.oregonstate.edu"
 

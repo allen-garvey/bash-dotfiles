@@ -29,4 +29,3 @@ alias nginx="sudo service nginx"
 #assumes redis installed and configured from:
 #https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04
 alias redis_start="sudo systemctl start redis"
-alias redis="redis-cli"
