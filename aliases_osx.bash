@@ -19,7 +19,8 @@ alias reload="source ~/.bash_profile;"
 
 #REDIS
 #assumes Redis is installed by homebrew
-alias redis_start="redis-server /usr/local/etc/redis.conf;"
+#starts redis as background daemon
+alias redis_start="brew services start redis;"
 
 
 #SUBLIME
