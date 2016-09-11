@@ -82,6 +82,13 @@ function opf() {
 EOF
 }
 
+#opens current site in `~/Sites` in browser at localhost
+#The following works if you paste the body of the function directly in the shell, but when used as an
+#alias or function, it opens site in Finder. Piping to sh is required to open in a browser when
+#part of a function for some reason
+#function open_site(){ pwd | sed -e 's|^.*/Sites|http://localhost|g' | { read url; open "$url"; }; }
+function open_site(){ pwd | sed -e 's|^.*/Sites|http://localhost|g' | { read url; echo "open $url"; } | sh -s; }
+
 #apache
 alias apache="sudo apachectl"
 alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;gitup;"
