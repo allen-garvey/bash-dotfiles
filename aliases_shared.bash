@@ -112,6 +112,11 @@ function git_copy() { cp -r ./.git $1/.git; cp ./.gitignore $1/.gitignore; }
 #alias to discard all uncommited changes
 alias git_discard="git clean -df && git checkout -- ."
 
+
+#Music
+#requires sox to be installed by package manager - it is automatically aliased to `play`
+alias pinknoise="play -q -c 2 -n synth pinknoise band -n 1600 1500 tremolo .1 35;"
+
 #RAILS
 
 #rails aliases
