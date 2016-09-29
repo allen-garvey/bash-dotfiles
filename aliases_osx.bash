@@ -89,6 +89,26 @@ EOF
 #function open_site(){ pwd | sed -e 's|^.*/Sites|http://localhost|g' | { read url; open "$url"; }; }
 function open_site(){ pwd | sed -e 's|^.*/Sites|http://localhost|g' | { read url; echo "open $url"; } | sh -s; }
 
+#displays take a break notification
+#based on: https://reberhardt.com/blog/2016/02/09/a-dead-simple-break-timer-for-mac.html
+function breaktime() {
+  TIME_INTERVAL=900
+  MINUTES=$(expr $TIME_INTERVAL / 60)
+  SECONDS=$(expr $TIME_INTERVAL % 60)
+  echo "Break time started- you will be notified to take a break every $MINUTES minutes $SECONDS seconds"
+  while true
+  do
+      #test to make sure computer screen is on (i.e. not asleep) - if power state 4 means display is on
+      POWER_STATE=$(ioreg -n IODisplayWrangler | grep -i IOPowerManagement | sed 's/.*"CurrentPowerState"=\([0-9]\).*/\1/')
+      if [ $POWER_STATE -ne 4 ]
+      then
+          break
+      fi
+      sleep $TIME_INTERVAL
+      osascript -e 'display notification "Break time" with title "Rest your eyes!" sound name "Pop"'
+  done
+}
+
 #apache
 alias apache="sudo apachectl"
 alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;gitup;"
