@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cd ~ & \
 git clone https://github.com/allen-garvey/bash-dotfiles.git bash_dotfiles & \
 touch .bash_profile & \
