@@ -9,6 +9,10 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 alias settings="subl ~/.bash_aliases ~/.bashrc ~/.vimrc \"${DOTFILES_DIR}aliases_ubuntu.bash\" \"${DOTFILES_DIR}aliases_shared.bash\""
 alias reload="source ~/.bashrc;"
 
+#GIT
+#open stack overflow to add part of file in git to staging
+alias git_part="sensible-browser \"http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git\";"
+
 #APT
 alias apt="sudo apt-get"
 
