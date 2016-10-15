@@ -14,7 +14,8 @@ alias reload="source ~/.bashrc;"
 alias git_part="sensible-browser \"http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git\";"
 
 #APT
-alias apt="sudo apt-get"
+alias apt-get="sudo apt-get"
+alias aptg="sudo apt-get install"
 
 #alias to open current directory in file browser
 alias op="nautilus .;"
