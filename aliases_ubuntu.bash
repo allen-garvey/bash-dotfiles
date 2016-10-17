@@ -18,7 +18,12 @@ alias apt-get="sudo apt-get"
 alias aptg="sudo apt-get install"
 
 #alias to open current directory in file browser
-alias op="nautilus .;"
+if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
+	alias op="dolphin .;"
+#unity
+else
+	alias op="nautilus .;"
+fi
 
 #node
 alias node="nodejs"
