@@ -2,6 +2,8 @@
 
 #alias for bash settings
 alias dotfiles="cd \"$DOTFILES_DIR\""
+#update dotfiles
+alias update="git -C \"$DOTFILES_DIR\" pull && reload"
 
 #set input mode to vi
 set -o vi
