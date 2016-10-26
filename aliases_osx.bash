@@ -116,3 +116,41 @@ alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;
 #fonts
 alias fonts="cd ~/Library/fonts;op;"
 
+
+#calendar
+#prints calendar for current month and next 2 months
+#based on: http://unix.stackexchange.com/questions/182462/multi-month-view-in-calendar-cal-in-os-x
+function caln() {
+  month=$(date "+%m")
+  year=$(date "+%Y")
+
+  next_month=$(echo "($month + 1) % 13" | bc)
+  next_year="$year"
+  next_next_month=$(echo "($month + 2) % 13" | bc)
+  next_next_year="$year"
+  if [[ "$next_month" -eq "0" ]]; then
+    next_month="1"
+    next_next_month="2"
+    next_year=$(echo "$year + 1" | bc)
+    next_next_year="$next_year"
+  fi
+  if [[ "$next_next_month" -eq "0" ]]; then
+    next_next_month="1"
+    next_next_year=$(echo "$year + 1" | bc)
+  fi
+  paste <(cal "$month" "$year") \
+      <(cal "$next_month" "$next_year") \
+      <(cal "$next_next_month" "$next_next_year")
+}
+
+
+
+
+
+
+
+
+
+
+
+
