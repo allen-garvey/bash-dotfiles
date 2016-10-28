@@ -57,5 +57,7 @@ function brightness(){
 	xrandr --output eDP1 --brightness $amount
 }
 
+#aliases for network drives
+alias netdrives="cddirls ~/Network_Drives"
 #mount flip to filesystem
 alias mount_flip="sshfs  garveya@access.engr.oregonstate.edu:/nfs/stak/students/g/garveya/ ~/Network_Drives/flip/"

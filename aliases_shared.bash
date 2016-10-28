@@ -59,26 +59,28 @@ alias sp="if [ -f *.sublime-workspace ]; then subl *.sublime-workspace; else sub
 #Directories
 #generic change directory function
 function cddir() { cd "$1"; cd "./$2"; }
+#change directory and list contents
+function cddirls() { cddir "$1" "$2"; a; }
 
-function home() { cddir ~ "$1"; a; }
+alias home="cddirls ~ "
 
-#function to cd into directory in sites dir
-function sites() { cddir ~/Sites "$1"; }
+#alias to cd into directory in sites dir
+alias sites="cddir ~/Sites"
 
-#function to cd into directory in programming dir
-function doc() { cddir ~/Documents "$1"; }
+#alias to cd into directory in programming dir
+alias doc="cddir ~/Documents"
 
-#function to cd into directory in programming dir
-function prog() { cddir ~/Documents/Programming "$1"; a; }
+#alias to cd into directory in programming dir
+alias prog="cddirls ~/Documents/Programming"
 
-#function to cd into directory in desktop
-function desktop() { cddir ~/Desktop "$1"; }
+#alias to cd into directory in desktop
+alias desktop="cddir ~/Desktop"
 
-function downloads() { cddir ~/Downloads "$1"; }
+alias downloads="cddir ~/Downloads"
 
-function etc() { cddir /etc "$1"; a; }
+alias etc="cddirls /etc"
 
-function osu(){ cddir ~/Documents/OSU "$1"; ls; }
+alias osu="cddirls ~/Documents/OSU"
 
 #C++
 function cppc() { g++ "$1.cpp" -o $1; }
