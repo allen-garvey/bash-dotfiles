@@ -56,3 +56,6 @@ function brightness(){
 	fi
 	xrandr --output eDP1 --brightness $amount
 }
+
+#mount flip to filesystem
+alias mount_flip="sshfs  garveya@access.engr.oregonstate.edu:/nfs/stak/students/g/garveya/ ~/Network_Drives/flip/"
