@@ -1,7 +1,7 @@
 #Aliases for Ubuntu
 
 #built ins declared before shared
-alias grepc="grep -nrP --color=always"
+alias grepc="grep -nrP --color=auto"
 
 source "${DOTFILES_DIR}aliases_shared.bash"
 
