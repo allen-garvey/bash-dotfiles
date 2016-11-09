@@ -116,6 +116,19 @@ function git_copy() { cp -r "./.git" "$1/.git"; cp "./.gitignore" "$1/.gitignore
 #alias to discard all uncommited changes
 alias git_discard="git clean -df && git checkout -- ."
 
+#clone github repo using ssh
+#because github will only give https links if you are not signed in
+#argument should be github repo https url
+function github_ssh() {
+	if [[ "$#" -ne 1 ]] ; then
+    	echo "usage: github_ssh https://github.com/username/repo-name.git";
+    	return 1;
+	fi
+	https_url="$1";
+	ssh_url="git@github.com:${https_url//https:\/\//}";
+	echo -e "executing: git clone $ssh_url\n";
+	git clone "$ssh_url"
+}
 
 #Music
 #requires sox to be installed by package manager - it is automatically aliased to `play`
