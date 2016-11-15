@@ -125,7 +125,7 @@ function github_ssh() {
     	return 1;
 	fi
 	https_url="$1";
-	ssh_url="git@github.com:${https_url//https:\/\//}";
+	ssh_url="git@github.com:${https_url//https:\/\/github\.com\//}";
 	echo -e "executing: git clone $ssh_url\n";
 	git clone "$ssh_url"
 }
