@@ -6,7 +6,7 @@ alias grepc="grep -nrP --color=auto"
 source "${DOTFILES_DIR}aliases_shared.bash"
 
 #alias for bash settings
-alias settings="subl ~/.bash_aliases ~/.bashrc ~/.vimrc \"${DOTFILES_DIR}aliases_ubuntu.bash\" \"${DOTFILES_DIR}aliases_shared.bash\""
+alias settings="subl ~/.bashrc ~/.vimrc \"${DOTFILES_DIR}\""
 alias reload="source ~/.bashrc;"
 
 #GIT
