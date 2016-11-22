@@ -24,7 +24,7 @@ if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
 	alias op="dolphin . > /dev/null 2>&1 &"
 #unity
 else
-	alias op="nautilus .;"
+	alias op="nautilus . > /dev/null 2>&1"
 fi
 
 #node
