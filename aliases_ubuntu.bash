@@ -7,7 +7,7 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 
 #alias for bash settings
 alias settings="subl ~/.bashrc \"${DOTFILES_DIR}\""
-alias reload="source ~/.bashrc;"
+alias reload="source ~/.bashrc"
 
 #GIT
 #open stack overflow to add part of file in git to staging
