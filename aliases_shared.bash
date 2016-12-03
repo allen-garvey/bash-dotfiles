@@ -51,6 +51,10 @@ alias sasq="ruby \"${HOME}/Documents/Programming/Ruby/sassquatch/sassquatch.rb\"
 #alias for synced
 alias synced="rsync -a -p -u -v -v"
 
+#display weather
+#give zipcode as optional argument
+function weather(){ curl "wttr.in/$1"; }
+
 #SUBLIME
 
 #open sublime workspace in current directory if there is one, otherwise open folder in sublime
