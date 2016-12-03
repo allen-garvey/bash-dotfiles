@@ -1,4 +1,5 @@
 .DS_Store
+.directory
 *.sublime-project
 *.sublime-workspace
 **/.sass-cache/*
