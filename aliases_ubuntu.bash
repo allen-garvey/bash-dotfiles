@@ -65,3 +65,5 @@ export NETWORK_DRIVES_DIR
 alias netdrives="cddirls \"$NETWORK_DRIVES_DIR\""
 #mount flip to filesystem
 alias mount_flip="sshfs garveya@access.engr.oregonstate.edu:/nfs/stak/students/g/garveya/ \"$NETWORK_DRIVES_DIR/flip\"; netdrives flip"
+
+alias mount_alaska="sshfs allen@10.0.1.22:/home/allen/ \"$NETWORK_DRIVES_DIR/alaska\"; netdrives alaska"
