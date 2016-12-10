@@ -15,10 +15,26 @@ alias reload="source ~/.bash_profile"
 
 alias pkg="sudo pkg"
 
+#list rcvars to use for /etc/rc.conf
+alias rcvars="grepc rcvar /usr/local/etc/rc.d/*"
+
 #directories
 alias localetc="cddirls /usr/local/etc"
 
 #nginx
 alias nginx="sudo service nginx"
+
+#add site configuration file in 
+#sites-available to sites enabled
+#first argument should be name of site configuration file
+#in sites available
+function nginx_enable_site() {
+	if [[ "$#" -ne 1 ]] ; then
+    	echo "usage: nginx_enable_site <site-configuration-filename>";
+    	return 1;
+	fi
+
+	sudo ln -s "/usr/local/etc/nginx/sites-available/$1" "/usr/local/etc/nginx/sites-enabled/$1"
+}
 
 
