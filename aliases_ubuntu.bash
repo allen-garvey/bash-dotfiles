@@ -35,7 +35,19 @@ alias apache="sudo service apache2"
 
 #nginx
 alias nginx="sudo service nginx"
-#function ng() { sudo systemctl $1 nginx; }
+
+#add site configuration file in 
+#sites-available to sites enabled
+#first argument should be name of site configuration file
+#in sites available
+function nginx_enable_site() {
+	if [[ "$#" -ne 1 ]] ; then
+    	echo "usage: nginx_enable_site <site-configuration-filename>";
+    	return 1;
+	fi
+
+	sudo ln -s "/etc/nginx/sites-available/$1" "/etc/nginx/sites-enabled/$1"
+}
 
 #redis
 #assumes redis installed and configured from:
