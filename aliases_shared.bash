@@ -41,7 +41,7 @@ function mergef(){
 }
 
 #CONFIGS
-alias hosts="sudo vim /etc/hosts;"
+alias hosts="sudo -E vim /etc/hosts;"
 
 #CUSTOM SCRIPTS
 
