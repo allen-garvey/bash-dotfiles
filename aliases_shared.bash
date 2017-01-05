@@ -118,7 +118,7 @@ alias gd="git diff --cached"
 function git_copy() { cp -r "./.git" "$1/.git"; cp "./.gitignore" "$1/.gitignore"; }
 
 #alias to discard all uncommited changes
-alias git_discard="git clean -df && git checkout -- ."
+alias git_discard="git checkout -- ."
 
 #clone github repo using ssh
 #because github will only give https links if you are not signed in
