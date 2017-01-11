@@ -114,7 +114,7 @@ alias gu="git pull"
 #show diff between staged files and HEAD
 alias gd="git diff --cached"
 
-alias gits="git status"
+alias gts="git status"
 
 #function to copy git repo and gitignore
 function git_copy() { cp -r "./.git" "$1/.git"; cp "./.gitignore" "$1/.gitignore"; }
