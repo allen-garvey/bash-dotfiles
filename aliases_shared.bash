@@ -94,7 +94,18 @@ function c_c() { gcc -Wall -std=c99 -o $1 "$1.c"; }
 
 #D lang
 #setup src directory and makefile if it doesn't exist for new D project
-function d_setup() { mkdir -p ./src; mkdir -p ./bin; if [ ! -f ./makefile ]; then cat "${DOTFILES_DIR}default_d_makefile" >> ./makefile; fi }
+function d_setup() { 
+	mkdir -p ./src; 
+	mkdir -p ./bin; 
+	
+	if [ ! -f ./GNUmakefile ]; then 
+		cat "${DOTFILES_DIR}dlang/default_GNUmakefile" >> ./GNUmakefile; 
+	fi
+
+	if [ ! -f ./makefile ]; then 
+		cat "${DOTFILES_DIR}dlang/default_makefile" >> ./makefile; 
+	fi 
+}
 
 
 #Git
