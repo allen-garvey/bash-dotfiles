@@ -111,7 +111,14 @@ function d_setup() {
 #Git
 
 #function to create git repository and default .gitignore
-function git_setup() { git init; cat "${DOTFILES_DIR}default.gitignore" >> .gitignore; cat "${DOTFILES_DIR}default_license.txt" >> license.txt; cat "${DOTFILES_DIR}default_readme.md" >> README.md; }
+function git_setup() { 
+	local git_setup_dir="${DOTFILES_DIR}git/";
+	
+	git init; 
+	cat "${git_setup_dir}default.gitignore" >> .gitignore; 
+	cat "${git_setup_dir}default_license.txt" >> license.txt; 
+	cat "${git_setup_dir}default_readme.md" >> README.md; 
+}
 
 #alias to add all to git and check
 alias ga="git add .; git status;"
