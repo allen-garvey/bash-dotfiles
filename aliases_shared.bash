@@ -1,4 +1,5 @@
 #SETTINGS shared between OSX and linux
+SHARED_INCLUDES_DIR="${DOTFILES_DIR}shared_includes/"
 
 #alias for bash settings
 alias dotfiles="cd \"$DOTFILES_DIR\""
@@ -60,101 +61,12 @@ function weather(){ curl "wttr.in/$1"; }
 #open sublime workspace in current directory if there is one, otherwise open folder in sublime
 alias sp="if [ -f *.sublime-workspace ]; then subl *.sublime-workspace; else subl .; fi"
 
-#Directories
-#generic change directory function
-function cddir() { cd "$1"; cd "./$2"; }
-#change directory and list contents
-function cddirls() { cddir "$1" "$2"; a; }
 
-alias home="cddirls ~ "
+source "${SHARED_INCLUDES_DIR}directories.bash"
+source "${SHARED_INCLUDES_DIR}c.bash"
+source "${SHARED_INCLUDES_DIR}d.bash"
+source "${SHARED_INCLUDES_DIR}git.bash"
 
-#alias to cd into directory in sites dir
-alias sites="cddir ~/Sites"
-
-#alias to cd into directory in programming dir
-alias doc="cddir ~/Documents"
-
-#alias to cd into directory in programming dir
-alias prog="cddirls ~/Documents/Programming"
-
-#alias to cd into directory in desktop
-alias desktop="cddir ~/Desktop"
-
-alias downloads="cddir ~/Downloads"
-
-alias etc="cddirls /etc"
-
-alias osu="cddirls ~/Documents/OSU"
-
-#C++
-function cppc() { g++ "$1.cpp" -o $1; }
-
-#c
-function c_c() { gcc -Wall -std=c99 -o $1 "$1.c"; }
-
-#D lang
-#setup src directory and makefile if it doesn't exist for new D project
-function d_setup() {
-	local d_setup_dir="${DOTFILES_DIR}dlang/";
-	
-	mkdir -p ./src; 
-	mkdir -p ./bin; 
-	
-	if [ ! -f ./GNUmakefile ]; then 
-		cat "${d_setup_dir}default_GNUmakefile" >> ./GNUmakefile; 
-	fi
-
-	if [ ! -f ./makefile ]; then 
-		cat "${d_setup_dir}default_makefile" >> ./makefile; 
-	fi 
-}
-
-
-#Git
-
-#function to create git repository and default .gitignore
-function git_setup() { 
-	local git_setup_dir="${DOTFILES_DIR}git/";
-	
-	git init; 
-	cat "${git_setup_dir}default.gitignore" >> .gitignore; 
-	cat "${git_setup_dir}default_license.txt" >> license.txt; 
-	cat "${git_setup_dir}default_readme.md" >> README.md; 
-}
-
-#alias to add all to git and check
-alias ga="git add .; git status;"
-
-alias gm="git commit -m"
-
-alias gp="git push"
-
-alias gu="git pull"
-
-#show diff between staged files and HEAD
-alias gd="git diff --cached"
-
-alias gts="git status"
-
-#function to copy git repo and gitignore
-function git_copy() { cp -r "./.git" "$1/.git"; cp "./.gitignore" "$1/.gitignore"; }
-
-#alias to discard all uncommited changes
-alias git_discard="git checkout -- ."
-
-#clone github repo using ssh
-#because github will only give https links if you are not signed in
-#argument should be github repo https url
-function github_ssh() {
-	if [[ "$#" -ne 1 ]] ; then
-    	echo "usage: github_ssh https://github.com/username/repo-name.git";
-    	return 1;
-	fi
-	https_url="$1";
-	ssh_url="git@github.com:${https_url//https:\/\/github\.com\//}";
-	echo -e "executing: git clone $ssh_url\n";
-	git clone "$ssh_url"
-}
 
 #Music
 #requires sox to be installed by package manager - it is automatically aliased to `play`
@@ -191,11 +103,5 @@ alias jeks="jekyll serve --port 3000"
 #REDIS
 alias redis="redis-cli"
 
-#SSH logins
 
-#OSU
-alias flip="ssh garveya@access.engr.oregonstate.edu"
-
-#Alaska Server
-alias alaska="ssh allen@10.0.1.22"
-
+source "${SHARED_INCLUDES_DIR}ssh.bash"
