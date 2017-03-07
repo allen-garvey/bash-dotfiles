@@ -26,10 +26,6 @@ function findex() { find . -type f -name \*.$1; }
 #find file by name recursively in current directory
 alias findf="find . -name"
 
-#prints out http headers for url - arg $1 is url
-#http://stackoverflow.com/questions/10060098/getting-only-response-header-from-http-post-using-curl
-function curlhead() { curl -s -D - $1 -o /dev/null; }
-
 #combine the contents of all files in directory matching extension into one merged file
 #$1 is input directory; $2 is full path of output file; $3 is file extension matching files in input directory
 function mergef(){ 
@@ -42,7 +38,6 @@ function mergef(){
 }
 
 #CONFIGS
-alias hosts="sudo -E vim /etc/hosts;"
 
 #CUSTOM SCRIPTS
 
@@ -61,7 +56,7 @@ function weather(){ curl "wttr.in/$1"; }
 #open sublime workspace in current directory if there is one, otherwise open folder in sublime
 alias sp="if [ -f *.sublime-workspace ]; then subl *.sublime-workspace; else subl .; fi"
 
-
+source "${SHARED_INCLUDES_DIR}net.bash"
 source "${SHARED_INCLUDES_DIR}directories.bash"
 source "${SHARED_INCLUDES_DIR}c.bash"
 source "${SHARED_INCLUDES_DIR}d.bash"
