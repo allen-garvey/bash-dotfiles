@@ -11,12 +11,6 @@ set -o vi
 
 #basic shell directory traversal and finding things
 source "${SHARED_INCLUDES_DIR}shell.bash"
-
-#CUSTOM SCRIPTS
-
-#alias for sassquatch
-alias sasq="ruby \"${HOME}/Documents/Programming/Ruby/sassquatch/sassquatch.rb\""
-
 source "${SHARED_INCLUDES_DIR}sublime.bash"
 source "${SHARED_INCLUDES_DIR}net.bash"
 source "${SHARED_INCLUDES_DIR}directories.bash"
