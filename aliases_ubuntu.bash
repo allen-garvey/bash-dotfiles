@@ -42,7 +42,7 @@ alias nginx="sudo service nginx"
 #in sites available
 function nginx_enable_site() {
 	if [[ "$#" -ne 1 ]] ; then
-    	echo "usage: nginx_enable_site <site-configuration-filename>";
+    	>&2 echo "usage: ${FUNCNAME[0]} <site-configuration-filename>"
     	return 1;
 	fi
 
