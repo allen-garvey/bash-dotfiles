@@ -33,3 +33,16 @@ function rsync_dir() {
 	
 	rsync --update --compress --recursive --itemize-changes --verbose --progress --exclude=".*/" $source_dir $dest_dir
 }
+
+# syncs file
+function rsync_file() {
+	if [[ -z $1 || -z $2 ]]; then
+		>&2 echo "usage: ${FUNCNAME[0]} source_filename dest_filename"
+		return 1;
+	fi
+
+	source_filename=$1
+	dest_filename=$2
+	
+	rsync --update --compress --itemize-changes --verbose --progress $source_filename $dest_filename
+}
