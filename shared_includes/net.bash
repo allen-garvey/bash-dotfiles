@@ -31,7 +31,7 @@ function rsync_dir() {
 		dest_dir="$dest_dir/"
 	fi
 	
-	rsync --update --compress --recursive --itemize-changes --verbose --progress --exclude=".*/" $source_dir $dest_dir
+	time rsync --update --compress --recursive --itemize-changes --verbose --progress --exclude=".*/" $source_dir $dest_dir
 }
 
 # syncs file
@@ -44,5 +44,5 @@ function rsync_file() {
 	source_filename=$1
 	dest_filename=$2
 	
-	rsync --update --compress --itemize-changes --verbose --progress $source_filename $dest_filename
+	time rsync --update --compress --itemize-changes --verbose --progress $source_filename $dest_filename
 }
