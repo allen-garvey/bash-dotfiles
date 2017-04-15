@@ -11,6 +11,7 @@ set -o vi
 
 #basic shell directory traversal and finding things
 source "${SHARED_INCLUDES_DIR}shell.bash"
+source "${SHARED_INCLUDES_DIR}filesystem.bash"
 source "${SHARED_INCLUDES_DIR}sublime.bash"
 source "${SHARED_INCLUDES_DIR}net.bash"
 source "${SHARED_INCLUDES_DIR}directories.bash"
