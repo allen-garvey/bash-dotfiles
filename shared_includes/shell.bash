@@ -1,7 +1,7 @@
 #BUILT INS
 alias a="ls -G -p"
-alias aa="a -a"
-alias aaa="aa -l"
+alias aa="a -A"
+alias aaa="aa -l -h"
 
 alias up="cd ../;a"
 
