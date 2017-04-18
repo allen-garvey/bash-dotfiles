@@ -1,5 +1,5 @@
 #BUILT INS
-alias a="ls -G"
+alias a="ls -G -p"
 alias aa="a -a"
 alias aaa="aa -l"
 
