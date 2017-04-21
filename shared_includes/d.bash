@@ -6,10 +6,6 @@ function d_setup() {
 	
 	mkdir -p ./src; 
 	mkdir -p ./bin; 
-	
-	if [ ! -f ./GNUmakefile ]; then 
-		cat "${d_setup_dir}default_GNUmakefile" >> ./GNUmakefile; 
-	fi
 
 	if [ ! -f ./makefile ]; then 
 		cat "${d_setup_dir}default_makefile" >> ./makefile; 
