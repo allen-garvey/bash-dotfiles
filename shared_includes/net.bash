@@ -8,7 +8,15 @@ function curlhead() { curl -s -D - $1 -o /dev/null; }
 
 #alias for simple python server
 #serves current directory on localhost:3000
-alias simpleserver="python -m SimpleHTTPServer 3000"
+function simpleserver() {
+	port_num_regex='^[1-9]+[0-9]{3,}$'
+	port_num='3000'
+
+	if [[ $1 =~ $port_num_regex ]]; then
+		port_num="$1"
+	fi
+	python -m SimpleHTTPServer "$port_num"
+}
 
 # syncs the contents of destination folder with contents
 # of source folder
