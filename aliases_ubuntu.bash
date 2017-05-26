@@ -9,6 +9,9 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 alias settings="subl ~/.bashrc \"${DOTFILES_DIR}\""
 alias reload="source ~/.bashrc"
 
+#sublime text
+alias sublime-snippets="cddir ~/.config/sublime-text-3/Packages/User/sublime-snippets"
+
 #GIT
 #open stack overflow to add part of file in git to staging
 alias git_part="sensible-browser \"http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git\";"
