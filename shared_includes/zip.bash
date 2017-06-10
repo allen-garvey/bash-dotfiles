@@ -13,5 +13,5 @@ function zip_dir(){
 		>&2 echo "$zip_filename already exists"
 		return 1;
 	fi
-	zip -r "$zip_filename" "$1"
+	zip -r "$zip_filename" "$1" --exclude '*.directory*'
 }
