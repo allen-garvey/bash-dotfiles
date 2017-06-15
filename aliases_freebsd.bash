@@ -5,7 +5,7 @@ export HISTCONTROL=ignoreboth:erasedups
 
 #basic shell setup to mimic ubuntu
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
-LSCOLORS='d'; export LSCOLORS
+LSCOLORS=d; export LSCOLORS
 export PAGER=less
 export EDITOR=vim
 alias grepc="grep -nr --color=always"
