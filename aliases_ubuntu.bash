@@ -74,4 +74,8 @@ function brightness(){
 	xrandr --output eDP1 --brightness $amount
 }
 
+
+#directories
+alias pic="cddir ~/Pictures"
+
 source "${SHARED_INCLUDES_DIR}sshfs.bash"
