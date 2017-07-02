@@ -1,4 +1,4 @@
-function start_daemon(){
+function daemon_start(){
 	#check number of arguments
 	if [[ "$#" -ne 2 ]] ; then
     	>&2 echo "usage: ${FUNCNAME[0]} <command> <pid_filename>"
