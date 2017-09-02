@@ -31,7 +31,7 @@ else
 fi
 
 #node
-alias node="nodejs"
+#alias node="/usr/bin/node"
 
 #apache
 alias apache="sudo service apache2"
