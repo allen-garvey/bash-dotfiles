@@ -30,14 +30,14 @@ else
 	alias op="nautilus . > /dev/null 2>&1"
 fi
 
-#node
-#alias node="/usr/bin/node"
-
 #apache
 alias apache="sudo service apache2"
 
 #nginx
 alias nginx="sudo service nginx"
+
+#openresty
+alias openresty="sudo service openresty"
 
 #add site configuration file in 
 #sites-available to sites enabled
