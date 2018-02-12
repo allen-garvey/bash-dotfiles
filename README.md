@@ -1,6 +1,6 @@
 # Bash Dotfiles
 
-Script to save the compiled output files (.php etc) to static .html files.
+Configuration files to setup Bash shell and Vim across various operating systems.
 
 ## Dependencies
 
