@@ -1,5 +1,8 @@
 #Aliases for Ubuntu
 
+#flatpak
+alias gimp-flatpak="flatpak run org.gimp.GIMP"
+
 #built ins declared before shared
 alias grepc="grep -nrP --color=auto"
 
@@ -50,6 +53,19 @@ function nginx_enable_site() {
 	fi
 
 	sudo ln -s "/etc/nginx/sites-available/$1" "/etc/nginx/sites-enabled/$1"
+}
+
+#add site configuration file in 
+#sites-available to sites enabled
+#first argument should be name of site configuration file
+#in sites available
+function openresty_enable_site() {
+	if [[ "$#" -ne 1 ]] ; then
+    	>&2 echo "usage: ${FUNCNAME[0]} <site-configuration-filename>"
+    	return 1;
+	fi
+
+	sudo ln -s "/etc/openresty/sites-available/$1" "/etc/openresty/sites-enabled/$1"
 }
 
 #redis
