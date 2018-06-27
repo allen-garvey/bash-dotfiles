@@ -42,6 +42,8 @@ alias nginx="sudo service nginx"
 #openresty
 alias openresty="sudo service openresty"
 
+alias openresty_check_config="sudo openresty -t"
+
 #add site configuration file in 
 #sites-available to sites enabled
 #first argument should be name of site configuration file
