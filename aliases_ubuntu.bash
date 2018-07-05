@@ -75,24 +75,6 @@ function openresty_enable_site() {
 #https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04
 alias redis_start="sudo systemctl start redis"
 
-#adjust screen brightness for zenbook
-#http://askubuntu.com/questions/696239/how-can-i-change-the-screen-brightness-on-zenbook-ux305-with-media-buttons
-function brightness(){
-	amount="$1"
-	re='^1\.00?$|^0\.[1-9][0-9]*$'
-	if ! [[ "$amount" =~ $re ]] ; then
-	   echo "brightness- usage: brightness [0.1-1]" >&2; 
-	   return 1;
-	fi
-	if [[ $(echo " $amount > 1" | bc) -eq 1 ]]; then
-		amount="1"
-	elif [[ $(echo " $amount < 0.1" | bc) -eq 1 ]]; then
-		amount="0.1"
-	fi
-	xrandr --output eDP1 --brightness $amount
-}
-
-
 #directories
 alias pic="cddir ~/Pictures"
 
