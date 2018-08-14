@@ -21,5 +21,3 @@ alias desktop="cddir ~/Desktop"
 alias downloads="cddir ~/Downloads"
 
 alias etc="cddirls /etc"
-
-alias osu="cddirls ~/Documents/OSU"
