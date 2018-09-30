@@ -27,6 +27,7 @@ Thumbs.db
 *.eot
 *.woff
 *.zip
-*.mp4
 *.tar
+*.mp4
+*.avi
 .vscode/*
