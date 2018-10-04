@@ -20,7 +20,9 @@ alias gp="git push"
 alias gu="git pull"
 
 #show diff between staged files and HEAD
-alias gd="git diff --cached"
+#hide whitespace differences flag from little things i like to do with git
+#https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
+alias gd="git diff --cached -w --word-diff"
 
 alias gts="git status"
 
