@@ -17,7 +17,7 @@ alias sublime-snippets="cddir ~/.config/sublime-text-3/Packages/User/sublime-sni
 
 #GIT
 #open stack overflow to add part of file in git to staging
-alias git_part="sensible-browser \"http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git\";"
+#alias git_part="sensible-browser \"http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git\";"
 
 alias gitup="git-cola > /dev/null 2>&1 &"
 
