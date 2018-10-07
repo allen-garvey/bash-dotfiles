@@ -1,7 +1,7 @@
 #Aliases for Ubuntu
 
 #flatpak
-alias gimp-flatpak="flatpak run org.gimp.GIMP"
+# alias gimp-flatpak="flatpak run org.gimp.GIMP"
 
 #built ins declared before shared
 alias grepc="grep -nrP --color=auto"
