@@ -34,7 +34,7 @@ else
 fi
 
 #apache
-alias apache="sudo service apache2"
+#alias apache="sudo service apache2"
 
 #nginx
 alias nginx="sudo service nginx"
