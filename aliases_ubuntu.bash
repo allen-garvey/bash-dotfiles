@@ -79,3 +79,6 @@ alias redis_start="sudo systemctl start redis"
 alias pic="cddir ~/Pictures"
 
 source "${SHARED_INCLUDES_DIR}sshfs.bash"
+
+#mix for elixir
+export PATH="/usr/local/bin:$PATH"
