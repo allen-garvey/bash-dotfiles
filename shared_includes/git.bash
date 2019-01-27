@@ -3,11 +3,12 @@
 #function to create git repository and default .gitignore
 function git_setup() { 
 	local git_setup_dir="${DOTFILES_DIR}git/";
+	local current_year=$(date -u "+%Y");
 	
-	git init; 
-	cat "${git_setup_dir}default.gitignore" >> .gitignore; 
-	cat "${git_setup_dir}default_license.txt" >> license.txt; 
-	cat "${git_setup_dir}default_readme.md" >> README.md; 
+	git init;
+	cat "${git_setup_dir}default.gitignore" >> .gitignore;
+	sed "s/@CURRENT_YEAR/$current_year/" "${git_setup_dir}default_license.txt" >> license.txt; 
+	cat "${git_setup_dir}default_readme.md" >> README.md;
 }
 
 #alias to add all to git and check
