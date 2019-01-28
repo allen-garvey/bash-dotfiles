@@ -41,8 +41,8 @@ function github_ssh() {
     	echo "usage: github_ssh https://github.com/username/repo-name.git";
     	return 1;
 	fi
-	https_url="$1";
-	ssh_url="git@github.com:${https_url//https:\/\/github\.com\//}";
+	local https_url="$1";
+	local ssh_url="git@github.com:${https_url//https:\/\/github\.com\//}";
 	echo -e "executing: git clone $ssh_url\n";
 	git clone "$ssh_url"
 }
