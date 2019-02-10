@@ -8,8 +8,8 @@ function rsync_dir() {
 		return 1;
 	fi
 
-	source_dir=$1
-	dest_dir=$2
+	local source_dir=$1
+	local dest_dir=$2
 
 	#make sure the names of both directories end in slashes
 	if ! [[ $source_dir =~ /$ ]]; then
@@ -19,7 +19,7 @@ function rsync_dir() {
 		dest_dir="$dest_dir/"
 	fi
 	
-	time rsync --update --compress --recursive --itemize-changes --verbose --progress --exclude='*.o' --exclude='*.directory' $source_dir $dest_dir
+	time rsync --update --compress --recursive --itemize-changes --verbose --progress --exclude='*.o' --exclude='*.directory' "$source_dir" "$dest_dir"
 }
 
 # syncs file
@@ -29,8 +29,8 @@ function rsync_file() {
 		return 1;
 	fi
 
-	source_filename=$1
-	dest_filename=$2
+	local source_filename=$1
+	local dest_filename=$2
 	
-	time rsync --update --compress --itemize-changes --verbose --progress $source_filename $dest_filename
+	time rsync --update --compress --itemize-changes --verbose --progress "$source_filename" "$dest_filename"
 }
