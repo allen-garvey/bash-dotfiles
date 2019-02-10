@@ -33,3 +33,6 @@ Thumbs.db
 .vscode/*
 *.swp
 *.csv
+
+#Elixir phoenix dialyzer
+.elixir_ls/*
