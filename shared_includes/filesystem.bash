@@ -11,3 +11,12 @@ function makedir(){
 	cd $1;
 	pwd;
 }
+
+#disk size, get disk size of given directory
+function ds(){
+	if [[ "$#" -ne 1 ]] ; then
+    	>&2 echo "usage: ${FUNCNAME[0]} <directory_to_get_disk_size_of>"
+    	return 1;
+	fi
+	du -hs $1
+}
