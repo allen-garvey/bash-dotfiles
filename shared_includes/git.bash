@@ -33,6 +33,9 @@ function git_copy() { cp -r "./.git" "$1/.git"; cp "./.gitignore" "$1/.gitignore
 #alias to discard all uncommited changes
 alias git_discard="git checkout -- ."
 
+#delete previous commit
+alias git_revert="git reset --soft HEAD^"
+
 #clone github repo using ssh
 #because github will only give https links if you are not signed in
 #argument should be github repo https url
