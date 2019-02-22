@@ -26,7 +26,7 @@ alias redis_start="brew services start redis;"
 #SUBLIME
 
 #alias for sublime
-alias subl="open -a \"Sublime Text 3\""
+alias subl="open -a \"Sublime Text\""
 
 #alias for sublime packages
 alias subl_settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/sublime-snippets; open ."
