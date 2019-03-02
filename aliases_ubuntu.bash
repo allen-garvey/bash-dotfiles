@@ -23,7 +23,9 @@ alias gitup="git-cola > /dev/null 2>&1 &"
 
 #APT
 alias apt-get="sudo apt-get"
-alias aptg="sudo apt-get install"
+alias apt="sudo apt"
+alias aptu="sudo apt update && apt list --upgradable"
+alias aptg="sudo apt install"
 
 #alias to open current directory in file browser
 if [ "$XDG_CURRENT_DESKTOP" = "KDE" ]; then
