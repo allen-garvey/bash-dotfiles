@@ -44,14 +44,6 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 #alias to open current directory in gitup
 alias gitup="open . -a \"GitUp\""
-#open stack overflow to add part of file in git to staging
-alias git_part="open \"http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git\";"
-
-#RAILS
-
-#Convenience
-#start developing on existing web project in current directory (develop web)
-alias dw="op;gitup;subl .;"
 
 
 #Applescript for terminal commands
@@ -82,13 +74,6 @@ function opf() {
 EOF
 }
 
-#opens current site in `~/Sites` in browser at localhost
-#The following works if you paste the body of the function directly in the shell, but when used as an
-#alias or function, it opens site in Finder. Piping to sh is required to open in a browser when
-#part of a function for some reason
-#function open_site(){ pwd | sed -e 's|^.*/Sites|http://localhost|g' | { read url; open "$url"; }; }
-function open_site(){ pwd | sed -e 's|^.*/Sites|http://localhost|g' | { read url; echo "open $url"; } | sh -s; }
-
 #displays take a break notification
 #based on: https://reberhardt.com/blog/2016/02/09/a-dead-simple-break-timer-for-mac.html
 function breaktime() {
@@ -109,39 +94,6 @@ function breaktime() {
   done
 }
 
-#apache
-alias apache="sudo apachectl"
-alias apache_config="cd /etc/apache2;op;prog Configuration/apache_config;subl .;gitup;"
-
-#fonts
-alias fonts="cd ~/Library/fonts;op;"
-
-
-#calendar
-#prints calendar for current month and next 2 months
-#based on: http://unix.stackexchange.com/questions/182462/multi-month-view-in-calendar-cal-in-os-x
-function caln() {
-  month=$(date "+%m")
-  year=$(date "+%Y")
-
-  next_month=$(echo "($month + 1) % 13" | bc)
-  next_year="$year"
-  next_next_month=$(echo "($month + 2) % 13" | bc)
-  next_next_year="$year"
-  if [[ "$next_month" -eq "0" ]]; then
-    next_month="1"
-    next_next_month="2"
-    next_year=$(echo "$year + 1" | bc)
-    next_next_year="$next_year"
-  fi
-  if [[ "$next_next_month" -eq "0" ]]; then
-    next_next_month="1"
-    next_next_year=$(echo "$year + 1" | bc)
-  fi
-  paste <(cal "$month" "$year") \
-      <(cal "$next_month" "$next_year") \
-      <(cal "$next_next_month" "$next_next_year")
-}
 
 # copies ssh public key to clipboard
 # from: https://secure.vexxhost.com/billing/knowledgebase/171/How-can-I-generate-SSH-keys-on-Mac-OS-X.html
