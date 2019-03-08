@@ -7,7 +7,7 @@ function zip_dir(){
 		return 1;
 	fi
 	#based on: https://stackoverflow.com/questions/1848415/remove-slash-from-the-end-of-a-variable
-	zip_filename="${1%/}.zip"
+	local zip_filename="${1%/}.zip"
 
 	if [[ -e $zip_filename ]]; then
 		>&2 echo "$zip_filename already exists"

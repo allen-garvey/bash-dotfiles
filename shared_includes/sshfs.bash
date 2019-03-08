@@ -11,9 +11,10 @@ function sshfs_unmount(){
     	>&2 echo "usage: ${FUNCNAME[0]} <directory_to_unmount>"
     	return 1;
 	fi
-	target_directory="${NETWORK_DRIVES_DIR}/${1}"
-	current_directory=`pwd`
-	target_directory_regex="^${target_directory}"
+	
+	local target_directory="${NETWORK_DRIVES_DIR}/${1}"
+	local current_directory=`pwd`
+	local target_directory_regex="^${target_directory}"
 	
 	#if we are in the directory to be unmounted it will fail
 	#cannot use double quotes in regex or it will do string match instead of regex match
