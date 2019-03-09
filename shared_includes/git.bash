@@ -20,15 +20,15 @@ alias gp="git push"
 
 alias gu="git pull"
 
-#show diff between staged files and HEAD
-#hide whitespace differences flag from little things i like to do with git
-#https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
-alias gd="git diff --cached -w --word-diff"
-
 alias gts="git status"
 
 #function to copy git repo and gitignore
 function git_copy() { cp -r "./.git" "$1/.git"; cp "./.gitignore" "$1/.gitignore"; }
+
+#show diff between staged files and HEAD
+#hide whitespace differences flag from little things i like to do with git
+#https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
+alias git_diff="git diff --cached -w --word-diff"
 
 #alias to discard all uncommited changes
 alias git_discard="git checkout -- ."
