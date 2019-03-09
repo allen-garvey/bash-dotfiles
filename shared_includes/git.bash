@@ -40,17 +40,3 @@ alias git_revert="git reset --soft HEAD^"
 alias gitb="git branch"
 
 function gitc() { git checkout -b $1; }
-
-#clone github repo using ssh
-#because github will only give https links if you are not signed in
-#argument should be github repo https url
-function github_ssh() {
-	if [[ "$#" -ne 1 ]] ; then
-    	echo "usage: github_ssh https://github.com/username/repo-name.git";
-    	return 1;
-	fi
-	local https_url="$1";
-	local ssh_url="git@github.com:${https_url//https:\/\/github\.com\//}";
-	echo -e "executing: git clone $ssh_url\n";
-	git clone "$ssh_url"
-}
