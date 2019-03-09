@@ -36,6 +36,11 @@ alias git_discard="git checkout -- ."
 #delete previous commit
 alias git_revert="git reset --soft HEAD^"
 
+#branching aliases
+alias gitb="git branch"
+
+function gitc() { git checkout -b $1; }
+
 #clone github repo using ssh
 #because github will only give https links if you are not signed in
 #argument should be github repo https url
