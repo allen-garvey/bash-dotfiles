@@ -37,6 +37,6 @@ alias git_discard="git checkout -- ."
 alias git_revert="git reset --soft HEAD^"
 
 #branching aliases
-alias gitb="git branch"
+alias gg="git branch"
 
 function gitc() { git checkout -b $1; }
