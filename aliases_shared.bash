@@ -9,6 +9,10 @@ alias update="git -C \"$DOTFILES_DIR\" pull && reload"
 #set input mode to vi
 set -o vi
 
+#set vim as default editor for git and other programs
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 #basic shell directory traversal and finding things
 source "${SHARED_INCLUDES_DIR}shell.bash"
 source "${SHARED_INCLUDES_DIR}filesystem.bash"
