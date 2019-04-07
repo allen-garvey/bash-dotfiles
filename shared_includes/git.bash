@@ -39,4 +39,4 @@ alias git_revert="git reset --soft HEAD^"
 #branching aliases
 alias gg="git branch"
 
-function gitc() { git checkout -b $1; }
+function gitc() { git checkout -b $1; reload; }
