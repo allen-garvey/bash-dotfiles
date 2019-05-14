@@ -82,8 +82,5 @@ alias pic="cddir ~/Pictures"
 
 source "${SHARED_INCLUDES_DIR}sshfs.bash"
 
-#visual studio code
-alias vcs="code ."
-
 #mix for elixir
 export PATH="/usr/local/bin:$PATH"
