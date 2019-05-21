@@ -7,9 +7,6 @@
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 export PS1="\[\033[01;32m\]\h\[\033[00m\]:\w\$ "
 
-#BUILT INS (declared before shared settings)
-alias grepc="grep -nr --color=auto"
-
 source "${DOTFILES_DIR}aliases_shared.bash"
 
 #alias for bash settings
