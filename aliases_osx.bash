@@ -40,6 +40,11 @@ function op() { open ./$1; }
 #Postgres.app - psql command
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
+#add code command
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
+
+
 #Git
 
 #alias to open current directory in gitup
