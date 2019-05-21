@@ -102,7 +102,7 @@ function breaktime() {
 
 # copies ssh public key to clipboard
 # from: https://secure.vexxhost.com/billing/knowledgebase/171/How-can-I-generate-SSH-keys-on-Mac-OS-X.html
-alias copy_ssh="pbcopy < ~/.ssh/id_rsa.pub"
+alias ssh_copy="pbcopy < ~/.ssh/id_rsa.pub"
 
 
 
