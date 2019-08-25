@@ -16,8 +16,6 @@ alias ga="git add .; git status;"
 
 alias gm="git commit -m"
 
-alias gp="git push"
-
 alias gu="git pull"
 
 alias gts="git status"
@@ -40,3 +38,17 @@ alias git_revert="git reset --soft HEAD^"
 alias gg="git branch"
 
 function gitc() { git checkout -b $1; reload; }
+
+#pushes current branch
+function gp(){
+	local current_branch_name="$(git rev-parse --abbrev-ref HEAD)"
+	if [[ -z "$current_branch_name" ]]; then
+		>&2 echo "You do not appear to be currently in a git branch"
+		return 1;
+	fi
+
+	local git_push_remote="${1:-origin}"
+
+	echo "git push $git_push_remote $current_branch_name"
+	git push "$git_push_remote" "$current_branch_name"
+}
