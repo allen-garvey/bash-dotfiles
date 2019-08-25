@@ -21,7 +21,15 @@ alias gu="git pull"
 alias gts="git status"
 
 #function to copy git repo and gitignore
-function git_copy() { cp -r "./.git" "$1/.git"; cp "./.gitignore" "$1/.gitignore"; }
+function git_copy() { 
+	if [[ -z $1 ]]; then
+		>&2 echo "usage: ${FUNCNAME[0]} destination_directory"
+		return 1;
+	fi
+
+	cp -r "./.git" "$1/.git"; 
+	cp "./.gitignore" "$1/.gitignore"; 
+}
 
 #show diff between staged files and HEAD
 #hide whitespace differences flag from little things i like to do with git
