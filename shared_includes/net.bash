@@ -9,5 +9,13 @@ function curlhead() { curl -s -D - $1 -o /dev/null; }
 #alias for simple python server
 #serves current directory on localhost:3000
 function simpleserver() {
-	python -m SimpleHTTPServer 3000
+
+	if [ -x "$(command -v php)" ]; then
+		php -S localhost:3000
+	elif [ -x "$(command -v python)" ]; then
+		python -m SimpleHTTPServer 3000
+	else
+		>&2 echo "php or python required for ${FUNCNAME[0]}"
+		return 1;
+	fi
 }
