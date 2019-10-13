@@ -89,6 +89,20 @@ function openresty_enable_site() {
 #https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04
 alias redis_start="sudo systemctl start redis"
 
+
+# alias for ebook-convert epub book to azw3
+function econvert() {
+	if [[ "$#" -ne 1 ]] ; then
+    	>&2 echo "usage: ${FUNCNAME[0]} <filename-of-book-to-convert>"
+    	return 1;
+	fi
+
+	local source_filename="$1"
+	local destination_filename="${source_filename%.*}.azw3"
+
+	time ebook-convert "$source_filename" "$destination_filename"
+}
+
 #directories
 alias pic="cddir ~/Pictures"
 
