@@ -39,8 +39,12 @@ alias git_diff="git diff --cached -w --word-diff"
 #alias to discard all uncommited changes
 alias git_discard="git checkout -- ."
 
-#delete previous commit
-alias git_revert="git reset --soft HEAD^"
+# revert previous commit
+# and move changes to staging
+function git_revert(){
+	git reset --soft HEAD^;
+	git status;
+}
 
 #branching aliases
 alias gg="git branch"
