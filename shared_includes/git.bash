@@ -49,7 +49,7 @@ function git_revert(){
 #branching aliases
 alias gg="git branch"
 
-function gitc() { git checkout -b $1; reload; }
+function gitc() { git checkout -b $1; }
 
 #pushes current branch
 function gp(){
