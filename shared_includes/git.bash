@@ -18,6 +18,8 @@ alias gm="git commit -m"
 
 alias gu="git pull"
 
+alias gum="git checkout master; git pull;"
+
 alias gts="git status"
 
 #function to copy git repo and gitignore
