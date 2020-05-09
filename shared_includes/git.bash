@@ -53,6 +53,8 @@ alias gg="git branch"
 
 function gitc() { git checkout -b $1; }
 
+alias gitc-="git checkout -"
+
 #pushes current branch
 function gp(){
 	local current_branch_name="$(git rev-parse --abbrev-ref HEAD)"
