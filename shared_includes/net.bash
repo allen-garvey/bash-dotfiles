@@ -19,3 +19,15 @@ function simpleserver() {
 		return 1;
 	fi
 }
+
+# based on: https://stackoverflow.com/questions/4421633/who-is-listening-on-a-given-tcp-port-on-mac-os-x
+function get_listener() {
+	if [[ -z $1 ]]; then
+		>&2 echo "usage: ${FUNCNAME[0]} port"
+		return 1;
+	fi
+
+	local PORT=$1
+
+	lsof -nP -iTCP:"$PORT" | grep LISTEN || echo "Nothing listening on $PORT"
+}
