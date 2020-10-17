@@ -30,6 +30,12 @@ Configuration files to setup Bash shell and Vim across various operating systems
 `export DOTFILES_DIR`
 `source "${DOTFILES_DIR}aliases_ubuntu.bash"`
 
+### One-liner setup for Ubuntu
+
+Make sure you are in the home directory first before running
+
+`sudo apt install git && git clone https://github.com/allen-garvey/bash-dotfiles.git && echo -e '\nDOTFILES_DIR="${HOME}/bash-dotfiles/"\nexport DOTFILES_DIR\nsource "${DOTFILES_DIR}aliases_ubuntu.bash"' >> ~/.bashrc && echo ":execute 'source '.fnameescape(\$DOTFILES_DIR).'main.vim'"  >> ~/.vimrc`
+
 ## Vim
 
 To use the vim settings type this in the terminal:
