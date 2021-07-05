@@ -14,5 +14,5 @@ function pg_backup(){
 	# test if database exists first
 	# https://stackoverflow.com/questions/14549270/check-if-database-exists-in-postgresql-using-shell
 	psql "$database_name" -c '' && \
-	pg_dump "$database_name" > "./${output_file}"
+	pg_dump "$database_name" | gzip --best > "./${output_file}.gz"
 }
