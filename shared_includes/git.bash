@@ -18,7 +18,18 @@ alias gm="git commit -m"
 
 alias gu="git pull"
 
-alias gum="git checkout master; git pull;"
+function gum() {
+	git show-branch main 2> /dev/null;
+	if [ $? -eq 0 ]; then
+        git checkout main;
+    else
+    	git checkout master;
+    fi
+    
+    if [ $? -eq 0 ]; then
+        git pull;
+    fi
+}
 
 alias gts="git status"
 
