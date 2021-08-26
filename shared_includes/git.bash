@@ -60,7 +60,7 @@ function git_revert(){
 }
 
 #branching aliases
-alias gg="git branch"
+alias gg="git show-branch;"
 
 function gitc() { git checkout -b $1; }
 
