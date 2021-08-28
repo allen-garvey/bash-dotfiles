@@ -23,6 +23,13 @@ function set_ps1(){
 #alias for bash settings
 alias settings="subl ~/.bashrc \"${DOTFILES_DIR}\""
 alias reload="source ~/.bashrc"
+function bash_profile() {
+	if [ -x "$(command -v subl)" ]; then
+		subl ~/.bashrc;
+	else
+		vim ~/.bashrc;
+	fi
+}
 
 #sublime text
 alias sublime-snippets="cddir ~/.config/sublime-text-3/Packages/User/sublime-snippets"
