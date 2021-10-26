@@ -45,8 +45,7 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 
 #Git
 
-#alias to open current directory in gitup
-alias gitup="open . -a \"GitUp\""
+alias gitup="git-cola"
 
 
 #Applescript for terminal commands
