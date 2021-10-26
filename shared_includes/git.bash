@@ -31,6 +31,12 @@ function gum() {
     fi
 }
 
+function gumr() {
+	local current_branch_name="$(git rev-parse --abbrev-ref HEAD)"
+	gum
+	git checkout "$current_branch_name"
+}
+
 alias gts="git status"
 
 #function to copy git repo and gitignore
