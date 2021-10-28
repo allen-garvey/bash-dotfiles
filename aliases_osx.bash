@@ -44,7 +44,7 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 
 
 #Git
-alias gitup="git-cola"
+alias gitup="git-cola &"
 alias gitcp="git rev-parse --abbrev-ref HEAD | xargs echo -n | pbcopy"
 
 
