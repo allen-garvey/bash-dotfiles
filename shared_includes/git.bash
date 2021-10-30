@@ -39,6 +39,8 @@ function gumr() {
 
 alias gts="git status"
 
+alias gitl="git log"
+
 #function to copy git repo and gitignore
 function git_copy() { 
 	if [[ -z $1 ]]; then
