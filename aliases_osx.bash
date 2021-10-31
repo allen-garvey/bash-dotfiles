@@ -14,6 +14,20 @@ alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}\""
 alias reload="source ~/.bash_profile"
 alias bash_profile="subl ~/.bash_profile;"
 
+PROMPT_COMMAND="set_ps1"
+
+function set_ps1(){
+  local first_part='\[\033[01;32m\]\h\[\033[00m\]:\w \[\033[0;36m\]'
+  local git_branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+
+	if [ ! -z "$git_branch" ]; then
+		git_branch="($git_branch)";
+	fi
+
+  local last_part='\[\033[00m\]\$ '
+  export PS1="$first_part$git_branch$last_part"
+}
+
 
 #REDIS
 #assumes Redis is installed by homebrew
@@ -40,7 +54,6 @@ export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 #add code command
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
 
 
 #Git
