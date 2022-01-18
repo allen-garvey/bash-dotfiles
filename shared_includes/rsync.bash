@@ -19,7 +19,7 @@ function rsync_dir() {
 		dest_dir="$dest_dir/"
 	fi
 	
-	time rsync --update --compress --recursive --itemize-changes --verbose --progress --exclude='*.o' --exclude='*.directory' "$source_dir" "$dest_dir"
+	time rsync --update --compress --recursive --itemize-changes --verbose --progress --exclude='*.o' --exclude='*.directory' --exclude='*.kra~' "$source_dir" "$dest_dir"
 }
 
 # syncs file
