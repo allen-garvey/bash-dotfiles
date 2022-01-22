@@ -87,3 +87,25 @@ function gp(){
 	echo "git push $git_push_remote $current_branch_name"
 	git push "$git_push_remote" "$current_branch_name"
 }
+
+# force push current branch
+function git_force_push(){
+	local current_branch_name="$(git rev-parse --abbrev-ref HEAD)"
+
+	if [[ -z "$current_branch_name" ]]; then
+		>&2 echo "You do not appear to be currently in a git branch"
+		return 1;
+	fi
+
+	if [[ "$current_branch_name" == 'master' ]] || [[ "$current_branch_name" == 'main' ]]; then
+		>&2 echo "Sorry Dave, I can't let you force push to $current_branch_name"
+		return 1;
+	fi
+
+	read -p "Are you sure you want to 'git push origin ${current_branch_name} --force'? (y/n) " -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		git push origin "${current_branch_name}" --force
+	fi
+}
