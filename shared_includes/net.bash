@@ -43,5 +43,23 @@ function get_listener() {
 
 	local PORT=$1
 
-	lsof -nP -iTCP:"$PORT" | grep LISTEN || echo "Nothing listening on $PORT"
+	lsof -nP -iTCP:"$PORT" | grep LISTEN || echo "Nothing listening on port $PORT"
+}
+
+function kill_listener() {
+	if [[ -z $1 ]]; then
+		>&2 echo "usage: ${FUNCNAME[0]} port"
+		return 1;
+	fi
+
+	local PORT=$1
+
+	local PID=$(lsof -nP -iTCP:3000 | grep LISTEN | awk -F ' ' '{print $2}')
+
+	if [[ -z "$PID" ]]; then
+		echo "Nothing listening on port $PORT";
+		return 1;
+	fi
+
+	kill -9 "${PID}"
 }
