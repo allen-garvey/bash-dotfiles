@@ -56,10 +56,7 @@ function kill_listener() {
 
 	local PID=$(lsof -nP -iTCP:3000 | grep LISTEN | awk -F ' ' '{print $2}')
 
-	if [[ -z "$PID" ]]; then
-		echo "Nothing listening on port $PORT";
-		return 1;
+	if [[ ! -z "$PID" ]]; then
+		kill -9 "${PID}";
 	fi
-
-	kill -9 "${PID}"
 }
