@@ -34,5 +34,8 @@ Thumbs.db
 *.swp
 *.csv
 
-#Elixir phoenix dialyzer
+# Env variables
+.env
+
+# Elixir phoenix dialyzer
 .elixir_ls/*
