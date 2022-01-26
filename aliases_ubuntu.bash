@@ -12,7 +12,13 @@ source "${DOTFILES_DIR}aliases_shared.bash"
 PROMPT_COMMAND="set_ps1"
 
 function set_ps1(){
-	local first_part='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\033[00m\]'
+	if [ ! -z "$BASH_DOTFILES_IS_PRODUCTION" ]; then
+		local user_color='31'
+	else
+		local user_color='32'
+	fi
+
+	local first_part="${debian_chroot:+($debian_chroot)}\[\033[01;${user_color}m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\033[00m\]"
 	local git_branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
 
 	if [ ! -z "$git_branch" ]; then
