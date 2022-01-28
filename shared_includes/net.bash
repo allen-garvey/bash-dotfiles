@@ -54,7 +54,7 @@ function kill_listener() {
 
 	local PORT=$1
 
-	local PID=$(lsof -nP -iTCP:3000 | grep LISTEN | awk -F ' ' '{print $2}')
+	local PID=$(lsof -nP -iTCP:$PORT | grep LISTEN | awk -F ' ' '{print $2}')
 
 	if [[ ! -z "$PID" ]]; then
 		kill -9 "${PID}";
