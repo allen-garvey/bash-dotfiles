@@ -121,6 +121,8 @@ function econvert() {
 	time ebook-convert "$source_filename" "$destination_filename"
 }
 
+alias cpdir="pwd | xsel -ib"
+
 #directories
 alias pic="cddir ~/Pictures"
 
