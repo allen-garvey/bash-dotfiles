@@ -114,6 +114,9 @@ function breaktime() {
 # from: https://secure.vexxhost.com/billing/knowledgebase/171/How-can-I-generate-SSH-keys-on-Mac-OS-X.html
 alias ssh_copy="pbcopy < ~/.ssh/id_rsa.pub"
 
+# removes warning about zsh being default shell
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 
 
 
