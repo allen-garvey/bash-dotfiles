@@ -18,16 +18,14 @@ Configuration files to setup Bash shell and Vim across various operating systems
 * Either copy and paste the contents of `aliases.bash` into your `.bash_profile` or link the files to your bash profile by typing `source ${PATH_TO_REPO}/aliases_${OS_NAME}.bash` in your `.bash_profile`
 
 ### Example .bash_profile for OSX
-`DOTFILES_DIR="${HOME}/bash-dotfiles/"`
-
-`export DOTFILES_DIR`
+`export DOTFILES_DIR="${HOME}/bash-dotfiles/"`
 
 `source "${DOTFILES_DIR}aliases_osx.bash"`
 
 ### Example .bashrc for Ubuntu
 
-`DOTFILES_DIR="${HOME}/bash-dotfiles/"`
-`export DOTFILES_DIR`
+`export DOTFILES_DIR="${HOME}/bash-dotfiles/"`
+
 `source "${DOTFILES_DIR}aliases_ubuntu.bash"`
 
 ### One-liner setup for Ubuntu
