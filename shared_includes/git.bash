@@ -68,7 +68,8 @@ function git_revert(){
 }
 
 #branching aliases
-alias gg="git show-branch;"
+alias gg="git for-each-ref --format=' %(authorname) %09 %(refname:lstrip=2)' --sort=committerdate --sort=authorname"
+alias ggg="git show-branch;"
 
 function gitc() { git checkout -b $1; }
 
