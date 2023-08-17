@@ -52,6 +52,15 @@ function git_copy() {
 	cp "./.gitignore" "$1/.gitignore"; 
 }
 
+function git_merge() {
+	if [[ -z $1 ]]; then
+		>&2 echo "usage: ${FUNCNAME[0]} git_branch_to_merge"
+		return 1;
+	fi
+
+	git merge $1 --no-edit;
+}
+
 #show diff between staged files and HEAD
 #hide whitespace differences flag from little things i like to do with git
 #https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
