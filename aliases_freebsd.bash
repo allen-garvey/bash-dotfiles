@@ -5,7 +5,7 @@ export HISTCONTROL=ignoreboth:erasedups
 
 #basic shell setup to mimic ubuntu
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
-LSCOLORS='dxfxcxdxbxegedabagacad'; export LSCOLORS
+export LSCOLORS='dxfxcxdxbxegedabagacad'; 
 export PAGER=less
 export EDITOR=vim
 alias grepc="grep -nr --color=always"
@@ -17,8 +17,6 @@ alias bash_profile="vim ~/.bash_profile;"
 
 #built ins
 
-alias pkg="sudo pkg"
-
 #list rcvars to use for /etc/rc.conf
 alias rcvars="grepc rcvar /usr/local/etc/rc.d/*"
 
@@ -26,7 +24,7 @@ alias rcvars="grepc rcvar /usr/local/etc/rc.d/*"
 alias localetc="cddirls /usr/local/etc"
 
 #nginx
-alias nginx="sudo service nginx"
+alias nginx="service nginx"
 
 #add site configuration file in 
 #sites-available to sites enabled
@@ -38,7 +36,7 @@ function nginx_enable_site() {
     	return 1;
 	fi
 
-	sudo ln -s "/usr/local/etc/nginx/sites-available/$1" "/usr/local/etc/nginx/sites-enabled/$1"
+	ln -s "/usr/local/etc/nginx/sites-available/$1" "/usr/local/etc/nginx/sites-enabled/$1"
 }
 
 
