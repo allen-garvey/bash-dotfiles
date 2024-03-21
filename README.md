@@ -28,6 +28,10 @@ Configuration files to setup Bash shell and Vim across various operating systems
 
 `source "${DOTFILES_DIR}aliases_ubuntu.bash"`
 
+### Example .bash_profile for freebsd
+`export DOTFILES_DIR="${HOME}/bash-dotfiles/"`
+`source "${DOTFILES_DIR}aliases_freebsd.bash"`
+
 ### One-liner setup for Ubuntu
 
 Make sure you are in the home directory first before running
