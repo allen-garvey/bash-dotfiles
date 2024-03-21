@@ -5,9 +5,9 @@ export HISTCONTROL=ignoreboth:erasedups
 
 #basic shell setup to mimic ubuntu
 if [ ! -z "$BASH_DOTFILES_IS_PRODUCTION" ]; then
-	local user_color='31'
+	user_color='31'
 else
-	local user_color='32'
+	user_color='32'
 fi
 export PS1="\[\033[01;${user_color}m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 export LSCOLORS='dxfxcxdxbxegedabagacad'; 
