@@ -3,7 +3,10 @@
 export PATH="~/.npm-global/bin:$PATH"
 
 # alias to update all dependencies in package.json
-alias ncuu="ncu -u && npm install && npm audit fix"
+function ncuu() {
+    ncu -u && npm install
+    npm audit fix
+}
 
 alias npm_install="npm install && npm audit fix"
 
