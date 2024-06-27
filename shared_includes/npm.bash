@@ -4,7 +4,8 @@ export PATH="~/.npm-global/bin:$PATH"
 
 # alias to update all dependencies in package.json
 function ncuu() {
-    ncu -u && npm install
+    ncu -u
+    npm install
     npm audit fix
 }
 
