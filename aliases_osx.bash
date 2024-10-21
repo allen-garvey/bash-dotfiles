@@ -9,6 +9,8 @@ export PS1="\[\033[01;32m\]\h\[\033[00m\]:\w\$ "
 
 source "${DOTFILES_DIR}aliases_shared.bash"
 
+export SHELL_SESSION_HISTORY=0
+
 #alias for bash settings
 alias settings="subl ~/.bash_profile \"${DOTFILES_DIR}\""
 alias reload="source ~/.bash_profile"
