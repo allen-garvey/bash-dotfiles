@@ -5,7 +5,7 @@ Configuration files to setup Bash shell and Vim across various operating systems
 ## Dependencies
 
 * Bash shell
-* OSX, Ubuntu or FreeBSD
+* MacOS, Ubuntu or FreeBSD
 
 ## Getting Started
 
@@ -17,10 +17,10 @@ Configuration files to setup Bash shell and Vim across various operating systems
 
 * Either copy and paste the contents of `aliases.bash` into your `.bash_profile` or link the files to your bash profile by typing `source ${PATH_TO_REPO}/aliases_${OS_NAME}.bash` in your `.bash_profile`
 
-### Example .bash_profile for OSX
+### Example .bash_profile for MacOS
 `export DOTFILES_DIR="${HOME}/bash-dotfiles/"`
 
-`source "${DOTFILES_DIR}aliases_osx.bash"`
+`source "${DOTFILES_DIR}aliases_macos.bash"`
 
 ### Example .bashrc for Ubuntu
 

@@ -1,4 +1,4 @@
-#SETTINGS shared between OSX and linux
+#SETTINGS shared between macOS and linux
 SHARED_INCLUDES_DIR="${DOTFILES_DIR}shared_includes/"
 
 #alias for bash settings
