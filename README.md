@@ -50,6 +50,10 @@ For MacOS type this:
 
 For more information see [https://github.com/allen-garvey/vim_config](https://github.com/allen-garvey/vim_config)
 
+## SSH
+
+* `cat ssh_config.txt >> ~/.ssh/config`
+
 ## License
 
 Bash Dotfiles is released under the MIT License. See license.txt for more details.
