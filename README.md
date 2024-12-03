@@ -44,10 +44,6 @@ To use the vim settings type this in the terminal:
 
 `echo ":execute 'source '.fnameescape(\$DOTFILES_DIR).'main.vim'"  >> ~/.vimrc`
 
-For MacOS type this:
-
-`echo ":execute 'source '.fnameescape(\$DOTFILES_DIR).'macos.vim'"  >> ~/.vimrc`
-
 For more information see [https://github.com/allen-garvey/vim_config](https://github.com/allen-garvey/vim_config)
 
 ## SSH

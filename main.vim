@@ -18,8 +18,8 @@ set lbr
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 
-" Change colorscheme from default to delek
-colorscheme delek
+" Change colorscheme from default
+colorscheme habamax
 
 
 " TABS
