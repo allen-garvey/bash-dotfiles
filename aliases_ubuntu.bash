@@ -134,3 +134,5 @@ export PATH="/usr/local/bin:$PATH"
 # for GPG signing for Git
 # https://stackoverflow.com/questions/41052538/git-error-gpg-failed-to-sign-data
 export GPG_TTY=$(tty)
+
+alias services="service --status-all "
