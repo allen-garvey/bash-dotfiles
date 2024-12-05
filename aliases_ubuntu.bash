@@ -65,16 +65,8 @@ else
 	alias op="nautilus . > /dev/null 2>&1"
 fi
 
-#apache
-#alias apache="sudo service apache2"
-
 #nginx
-alias nginx="sudo service nginx"
-
-#openresty
-alias openresty="sudo service openresty"
-
-alias openresty_check_config="sudo openresty -t"
+alias nginx_check_config="nginx configtest"
 
 #add site configuration file in 
 #sites-available to sites enabled
