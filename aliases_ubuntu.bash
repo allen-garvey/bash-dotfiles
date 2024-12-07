@@ -68,6 +68,8 @@ fi
 #nginx
 alias nginx_check_config="nginx configtest"
 
+alias sites_available="cd /etc/nginx/sites-available"
+
 #add site configuration file in 
 #sites-available to sites enabled
 #first argument should be name of site configuration file
@@ -80,25 +82,6 @@ function nginx_enable_site() {
 
 	sudo ln -s "/etc/nginx/sites-available/$1" "/etc/nginx/sites-enabled/$1"
 }
-
-#add site configuration file in 
-#sites-available to sites enabled
-#first argument should be name of site configuration file
-#in sites available
-function openresty_enable_site() {
-	if [[ "$#" -ne 1 ]] ; then
-    	>&2 echo "usage: ${FUNCNAME[0]} <site-configuration-filename>"
-    	return 1;
-	fi
-
-	sudo ln -s "/etc/openresty/sites-available/$1" "/etc/openresty/sites-enabled/$1"
-}
-
-#redis
-#assumes redis installed and configured from:
-#https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04
-alias redis_start="sudo systemctl start redis"
-
 
 # alias for ebook-convert epub book to azw3
 function econvert() {
