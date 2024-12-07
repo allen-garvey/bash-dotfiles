@@ -9,6 +9,7 @@ function git_setup() {
 	cat "${git_setup_dir}default.gitignore" >> .gitignore;
 	sed "s/@CURRENT_YEAR/$current_year/" "${git_setup_dir}default_license.txt" >> license.txt; 
 	cat "${git_setup_dir}default_readme.md" >> README.md;
+	cat "${git_setup_dir}.prettierrc.json" >> .prettierrc.json;
 }
 
 #alias to add all to git and check
