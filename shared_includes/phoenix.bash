@@ -6,6 +6,9 @@ alias phxs_tunnel="UMBRELLA_DB_PORT=6789 phxs"
 alias minitaur="ssh root@minitaur.test"
 alias minitaur_db_tunnel="ssh -L 6789:localhost:5432 root@minitaur.test"
 
+alias umbrella="sites umbrella"
+alias photog="sites umbrella/apps/photog"
+
 function shutterbug_webp(){
     if [[ "$#" -ne 1 ]] ; then
         echo "usage: ${FUNCNAME[0]} photos_source_dir";
