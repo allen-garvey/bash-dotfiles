@@ -28,8 +28,10 @@ function simpleserver() {
 		php -S localhost:3000
 	elif [ -x "$(command -v python)" ]; then
 		python -m SimpleHTTPServer 3000
+	elif [ -x "$(command -v python3)" ]; then
+		python3 -m http.server 3000
 	else
-		>&2 echo "php or python required for ${FUNCNAME[0]}"
+		>&2 echo "php, python or python3 required for ${FUNCNAME[0]}"
 		return 1;
 	fi
 }
