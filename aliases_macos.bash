@@ -109,6 +109,9 @@ function breaktime() {
   done
 }
 
+alias nginx_config="cd $HOMEBREW_PREFIX/etc/nginx/servers"
+alias nginx_restart="nginx -s stop && nginx"
+
 
 # copies ssh public key to clipboard
 # from: https://secure.vexxhost.com/billing/knowledgebase/171/How-can-I-generate-SSH-keys-on-Mac-OS-X.html
