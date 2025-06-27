@@ -1,1 +1,0 @@
-alias docker="sudo docker"
