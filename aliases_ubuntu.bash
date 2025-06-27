@@ -26,7 +26,7 @@ function set_ps1(){
 	fi
 
 	local last_part='\[\033[00m\]\$ '
-	export PS1="$first_part$git_branch$last_part"
+	export PS1="$first_part$git_branch$VIRTUAL_ENV_PROMPT$last_part"
 }
 
 # export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \[\033[00m\]($(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\033[00m\]\$ "
