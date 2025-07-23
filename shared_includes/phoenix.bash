@@ -5,6 +5,7 @@ alias phxs_tunnel="UMBRELLA_DB_PORT=6789 phxs"
 
 alias minitaur="ssh root@minitaur.test"
 alias minitaur_db_tunnel="ssh -L 6789:localhost:5432 root@minitaur.test"
+alias minitaur_psql="psql -h 127.0.0.1 -p 6789 -U postgres -d umbrella"
 
 alias umbrella="sites umbrella"
 alias photog="sites umbrella/apps/photog"
