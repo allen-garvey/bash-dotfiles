@@ -50,6 +50,10 @@ For more information see [https://github.com/allen-garvey/vim_config](https://gi
 
 * `cat ssh_config.txt >> ~/.ssh/config`
 
+## Tmux
+
+`echo 'source-file $DOTFILES_DIR/tmux.conf' >> ~/.tmux.conf`
+
 ## License
 
 Bash Dotfiles is released under the MIT License. See license.txt for more details.
