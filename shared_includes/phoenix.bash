@@ -44,3 +44,21 @@ function distill_artour_html(){
     sites umbrella/apps/artour;
     UMBRELLA_DB_PORT="6789" mix distill.html
 }
+
+function tmux_phoenix(){
+    # based on: https://superuser.com/questions/440015/restore-tmux-session-after-reboot and https://stackoverflow.com/questions/59327704/tmux-open-4-panes-and-set-each-of-those-panes-to-a-specific-directory
+
+    local SESSIONNAME="phoenix"
+    tmux has-session -t $SESSIONNAME &> /dev/null
+
+    if [[ $? != 0 ]]; then
+        tmux new-session -s $SESSIONNAME -n main -c ~/Sites/umbrella -d
+        tmux split-window -h
+        tmux split-window -v
+        tmux select-pane -t 0
+        tmux split-window -v
+        tmux select-pane -t 0
+    fi
+
+    tmux attach -t $SESSIONNAME
+}
