@@ -1,3 +1,8 @@
+alias doc="cddir ~/Documents"
+alias prog="cddirls ~/Documents/Programming"
+alias desktop="cddir ~/Desktop"
+alias downloads="cddir ~/Downloads"
+
 alias dithermark="sites dithermark"
 alias wgu="doc WGU && vcs"
 
