@@ -7,6 +7,7 @@
 alias grepc="grep -nrP --color=auto"
 
 source "${DOTFILES_DIR}aliases_shared.bash"
+source "${SHARED_INCLUDES_DIR}dev.bash"
 
 #set prompt dynamically so git branch is always correct
 PROMPT_COMMAND="set_ps1"

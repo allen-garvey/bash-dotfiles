@@ -6,6 +6,7 @@ LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 export PS1="\[\033[01;32m\]\h\[\033[00m\]:\w\$ "
 
 source "${DOTFILES_DIR}aliases_shared.bash"
+source "${SHARED_INCLUDES_DIR}dev.bash"
 
 export SHELL_SESSION_HISTORY=0
 
