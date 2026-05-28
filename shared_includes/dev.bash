@@ -3,8 +3,13 @@ alias prog="cddirls ~/Documents/Programming"
 alias desktop="cddir ~/Desktop"
 alias downloads="cddir ~/Downloads"
 
+function open_dev(){
+    timeout 2s git pull
+    vcs
+}
+
 alias dithermark="sites dithermark"
-alias wgu="doc WGU && vcs"
+alias wgu="doc WGU && open_dev"
 
 alias minitaur_config="cd ~/Documents/Programming/Bash/minitaur-config && cat makefile"
 
@@ -16,6 +21,6 @@ function masters(){
 }
 
 alias strange_scenery_images="cd ~/Archive/strange-scenery/images"
-alias til="prog til && vcs"
-alias notes="cd ~/Documents/notes-and-lists && vcs"
-alias leetcode="prog leetcode && vcs"
+alias til="prog til && open_dev"
+alias notes="doc notes-and-lists && open_dev"
+alias leetcode="prog leetcode && open_dev"
