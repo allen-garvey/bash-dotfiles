@@ -29,6 +29,9 @@ function set_ps1(){
   export PS1="$first_part$git_branch$last_part"
 }
 
+# brew install coreutils
+alias timeout="gtimeout"
+
 
 #REDIS
 #assumes Redis is installed by homebrew
