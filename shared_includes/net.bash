@@ -20,6 +20,8 @@ function curlhead() {
 	fi
 }
 
+alias what_is_my_public_ip="echo \"$(curl -s ifconfig.me)/128\"" 
+
 #alias for simple python server
 #serves current directory on localhost:3000
 function simpleserver() {
