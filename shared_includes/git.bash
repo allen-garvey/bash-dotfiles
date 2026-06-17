@@ -120,3 +120,25 @@ function git_force_push(){
 		git push origin "${current_branch_name}" --force
 	fi
 }
+
+# interactive prompt to stage files
+function git_stage(){
+	while true
+	do
+		local staged_files=$(git status --porcelain | grep '^[^ ?]' | awk '{print "("NR")", "\033[32m"$NF"\033[0m"}')
+		local unstaged_files=$(git status --porcelain | grep '^[ ?]' | awk '{print $NF }')
+		echo -e "** Git staged files **\n"
+		echo "$staged_files"
+
+		echo -e "\n** Unstaged files **\n"
+		echo "$unstaged_files" | awk '{print "("NR")", $NF}'
+		echo ""
+
+		read -r -p "Enter file number to stage: " file_number
+		echo "$file_number"
+		file_name=$(echo "$unstaged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
+
+		echo "git add $file_name"
+		git add "$file_name"
+	done
+}
