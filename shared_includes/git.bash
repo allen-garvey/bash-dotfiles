@@ -131,7 +131,6 @@ function git_stage(){
 		# test for no files to stage
 		if [[ -z "$unstaged_files" ]]; then
 			echo "No files to stage"
-			git status
 			break;
 		fi
 		
@@ -146,7 +145,6 @@ function git_stage(){
 		
 		if ! [[ "$file_number" =~ ^[0-9]+$ ]]; then
 			echo "Exiting..."
-			git status
 			break;
 		fi
 
@@ -156,4 +154,6 @@ function git_stage(){
 			git add "$file_name"
 		fi
 	done
+
+	git status
 }
