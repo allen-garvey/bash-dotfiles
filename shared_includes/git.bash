@@ -127,15 +127,29 @@ function git_stage(){
 	do
 		local staged_files=$(git status --porcelain | grep '^[^ ?]' | awk '{print "("NR")", "\033[32m"$NF"\033[0m"}')
 		local unstaged_files=$(git status --porcelain | grep '^[ ?]' | awk '{print $NF }')
+		
+		# test for no files to stage
+		if [[ -z "$unstaged_files" ]]; then
+			echo "No files to stage"
+			git status
+			break;
+		fi
+		
 		echo -e "** Git staged files **\n"
 		echo "$staged_files"
 
 		echo -e "\n** Unstaged files **\n"
-		echo "$unstaged_files" | awk '{print "("NR")", $NF}'
+		echo "$unstaged_files" | awk '{print NR")", $NF}'
 		echo ""
 
 		read -r -p "Enter file number to stage: " file_number
-		echo "$file_number"
+		
+		if [[ -z "$file_number" ]]; then
+			echo "Exiting..."
+			git status
+			break;
+		fi
+
 		file_name=$(echo "$unstaged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
 
 		echo "git add $file_name"
