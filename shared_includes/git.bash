@@ -152,6 +152,8 @@ function git_stage(){
 
 		file_name=$(echo "$unstaged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
 
-		git add "$file_name"
+		if ! [[ -z "$file_name" ]]; then
+			git add "$file_name"
+		fi
 	done
 }
