@@ -125,8 +125,8 @@ function git_force_push(){
 function git_stage(){
 	while true
 	do
-		local staged_files=$(git status --porcelain | grep '^[^ ?]' | awk '{print "("NR")", "\033[32m"$NF"\033[0m"}')
-		local unstaged_files=$(git status --porcelain | grep '^[ ?]' | awk '{print $NF }')
+		local staged_files=$(git status --porcelain | grep '^. ' | awk '{print NR")", "\033[32m"$NF"\033[0m"}')
+		local unstaged_files=$(git status --porcelain | grep '^.[^ ]' | awk '{print $NF }')
 		
 		# test for no files to stage
 		if [[ -z "$unstaged_files" ]]; then
@@ -144,7 +144,7 @@ function git_stage(){
 
 		read -r -p "Enter file number to stage: " file_number
 		
-		if [[ -z "$file_number" ]]; then
+		if ! [[ "$file_number" =~ ^[0-9]+$ ]]; then
 			echo "Exiting..."
 			git status
 			break;
@@ -152,7 +152,6 @@ function git_stage(){
 
 		file_name=$(echo "$unstaged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
 
-		echo "git add $file_name"
 		git add "$file_name"
 	done
 }
