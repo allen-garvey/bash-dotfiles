@@ -125,33 +125,48 @@ function git_force_push(){
 function git_stage(){
 	while true
 	do
-		local staged_files=$(git status --porcelain | grep '^. ' | awk '{print NR")", "\033[32m"$NF"\033[0m"}')
-		local unstaged_files=$(git status --porcelain | grep '^.[^ ]' | awk '{print $NF }')
+		local staged_files=$(git status --porcelain | grep '^. ' | awk '{ print $NF }')
+		local unstaged_files=$(git status --porcelain | grep '^.[^ ]' | awk '{ print $NF }')
 		
 		# test for no files to stage
-		if [[ -z "$unstaged_files" ]]; then
+		if [[ -z "$unstaged_files" && -z "$staged_files" ]]; then
 			echo "No files to stage"
 			break;
 		fi
 		
 		echo -e "** Git staged files **\n"
-		echo "$staged_files"
+		if ! [[ -z "$staged_files" ]]; then
+			echo "$staged_files" | awk '{ print NR")", "\033[32m"$NF"\033[0m" }'
+		fi
 
 		echo -e "\n** Unstaged files **\n"
-		echo "$unstaged_files" | awk '{print NR")", $NF}'
+		if ! [[ -z "$unstaged_files" ]]; then
+			echo "$unstaged_files" | awk '{ print NR")", $NF }'
+		fi
 		echo ""
 
-		read -r -p "Enter file number to stage: " file_number
+		read -r -p "Enter file number to stage or u and file number to unstage: " file_number
 		
-		if ! [[ "$file_number" =~ ^[0-9]+$ ]]; then
+		if ! [[ "$file_number" =~ ^u?[0-9]+$ ]]; then
 			echo "Exiting..."
 			break;
 		fi
 
-		file_name=$(echo "$unstaged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
+		if [[ "$file_number" =~ ^u ]]; then
+			# unstage by file number
+			file_number=$(echo "$file_number" | sed -E 's/^u//')
+			file_name=$(echo "$staged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
 
-		if ! [[ -z "$file_name" ]]; then
-			git add "$file_name"
+			if ! [[ -z "$file_name" ]]; then
+				git restore --staged "$file_name"
+			fi		
+		else
+			# stage by file number
+			file_name=$(echo "$unstaged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
+
+			if ! [[ -z "$file_name" ]]; then
+				git add "$file_name"
+			fi
 		fi
 	done
 
