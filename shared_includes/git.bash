@@ -135,12 +135,12 @@ function git_stage(){
 		fi
 		
 		echo -e "** Git staged files **\n"
-		if ! [[ -z "$staged_files" ]]; then
+		if [[ -n "$staged_files" ]]; then
 			echo "$staged_files" | awk '{ print NR")", "\033[32m"$NF"\033[0m" }'
 		fi
 
 		echo -e "\n** Unstaged files **\n"
-		if ! [[ -z "$unstaged_files" ]]; then
+		if [[ -n "$unstaged_files" ]]; then
 			echo "$unstaged_files" | awk '{ print NR")", $NF }'
 		fi
 		echo ""
@@ -157,7 +157,7 @@ function git_stage(){
 			file_number=$(echo "$file_number" | sed -E 's/^u//')
 			file_name=$(echo "$staged_files" | awk -v file_number="$file_number" 'NR==file_number {print $NF}')
 
-			if ! [[ -z "$file_name" ]]; then
+			if [[ -n "$file_name" ]]; then
 				git restore --staged "$file_name"
 			fi		
 		else
