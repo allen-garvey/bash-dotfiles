@@ -2,7 +2,7 @@
 SHARED_INCLUDES_DIR="${DOTFILES_DIR}shared_includes/"
 
 #alias for bash settings
-alias dotfiles="cd \"$DOTFILES_DIR\""
+alias dotfiles="cd \"$DOTFILES_DIR\" && timeout 2s git pull"
 #update dotfiles
 alias update="git -C \"$DOTFILES_DIR\" pull && reload"
 
